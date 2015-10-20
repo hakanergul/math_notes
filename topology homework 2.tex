@@ -1,0 +1,231 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[turkish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\author{Hakan ERGÜL}
+
+\theoremstyle{definition} \newtheorem{teo}{Teorem}
+
+\setlength{\parskip}{3pt plus 2pt}
+\setlength{\parindent}{10pt}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\marginparsep}{0.75cm}
+\setlength{\marginparwidth}{2.5cm}
+\setlength{\marginparpush}{1.0cm}
+\setlength{\textwidth}{150mm}
+\begin{document}
+
+\begin{enumerate}
+\item[\textbf{4.}] $U\in\tau$ ve $ A $ kapalı olduğundan $A ^{c}\in \tau$ olarak veriliyor. O halde 
+\begin{displaymath}
+U\setminus A = U\cap A^{c} \in \tau
+\end{displaymath}
+olup $ U\setminus A $ açık bir kümedir. 
+Ayrıca $ A $ kapalı ve $ U $ açık olduğundan $ U^{c} $ kapalıdır. Bu takdirde
+\begin{displaymath}
+A\setminus U=A\cap U^{c}
+\end{displaymath}
+kapalıdır. Çünkü iki kapalı kümenin arakesiti de kapalıdır.
+
+\item[\textbf{8.}] 
+\begin{enumerate}
+\item[\textbf{a)}]
+$ x\in \overline{A\cap B} $ keyfi elemanını alalım. Bu takdirde
+\begin{eqnarray}
+&\forall &\!\!\!\!\!U\in \mathcal{N}_{x} :A \cap B\cap U\neq\emptyset \nonumber \\
+\Rightarrow &\forall &\!\!\!\!\!U\in \mathcal{N}_{x} :[A \cap U\neq\emptyset\, \wedge\, B\cap U\neq\emptyset]\nonumber \\
+\Rightarrow &\forall &\!\!\!\!\!U\in \mathcal{N}_{x} :[A \cap U\neq\emptyset]\, \wedge\, \forall U\in \mathcal{N}_{x} :[B \cap U\neq\emptyset]\nonumber
+\end{eqnarray}
+
+olup $ x \in \overline{A} $ ve $ x \in \overline{B} $ olur. Yani $ x \in \overline{A}\cap \overline{B}\, $ dir. Sonuç olarak $ x \in \overline{A\cap B} $ iken $ x \in \overline{A}\cap \overline{B} $ bulduk, yani
+\begin{displaymath}
+\overline{A\cap B}\subseteq \overline{A}\cap \overline{B}
+\end{displaymath}
+elde edilir.
+   \paragraph{}
+Diğer yandan $ x \in \overline{A}\cap \overline{B} $ alalım. $ x \in \overline{A} $ ve $ x \in \overline{B}\, $ dir. Yani
+\begin{eqnarray}
+&\forall & \!\!\!\!\!U\in \mathcal{N}_{x} :[A \cap U\neq\emptyset]\, \wedge\, \forall U\in \mathcal{N}_{x} :[B \cap U\neq\emptyset]\nonumber \\
+\Rightarrow &\forall &\!\!\!\!\!U\in \mathcal{N}_{x} :[A \cap U\neq\emptyset\, \wedge \,B \cap U\neq\emptyset] \nonumber
+\end{eqnarray}
+olur. Burada $ A\cap U\neq\emptyset $ ve $ B\cap U\neq\emptyset $ olması $ A\cap B\cap U\neq\emptyset $ olmasını gerektirmez. Zira $ A\cap B=\emptyset $ iken $ A\cap B\cap U=\emptyset $ olur Bu nedenle
+\begin{displaymath}
+\forall U \in \mathcal{N}_{x} : (A\cap B)\cap U\neq\emptyset
+\end{displaymath}
+diyemeyiz. Yani $ x \in \overline{A}\cap \overline{B} $ iken $ x \in \overline{A\cap B} $ olmayabilir. Bu da $ \overline{A}\cap \overline{B}\subseteq \overline{A\cap B} $ olamayabileceğini gösterir.
+
+\item[\textbf{b)}]
+\textbf{a)} şıkkından farklı bir yol izleyelim. $ \overline{A} $, $ A $ yı içeren tüm kapalı kümelerin arakesiti olduğundan ve bu arakesitin sonucu kapalı olduğundan "$ \overline{A} $, $ A $ yı içeren en küçük kapalı kümedir" diyebiliriz.
+\paragraph{}
+Öncelikle
+\begin{displaymath}
+A_{1}\subseteq \overline{A_{1}},\,\, A_{2}\subseteq\overline{A_{2}},\,\,  ... \Rightarrow \bigcap A_{\alpha}\subseteq \bigcap \overline{A_{\alpha}}
+\end{displaymath}
+olduğu kolayca görülür. $ \bigcap \overline{A_{\alpha}} $, kapalı keyfi sayıda kümenin arakesiti olup kapalıdır. $ \overline{\bigcap A_{\alpha}} $ nın, $ \bigcap A_{\alpha} $ yı içeren en küçük kapalı küme olduğu göz önüne alınırsa
+\begin{displaymath}
+\bigcap A_{\alpha} \subseteq \overline{\bigcap A_{\alpha}} \subseteq \bigcap \overline{A_{\alpha}}
+\end{displaymath}
+olur. Sonuç olarak
+\begin{displaymath}
+\overline{\bigcap A_{\alpha}} \subseteq \bigcap \overline{A_{\alpha}}
+\end{displaymath}
+elde ederiz.
+\paragraph{}
+Tersinin her zaman geçerli olmadığını \textbf{a)} şıkkından biliyoruz.
+
+\item[\textbf{c)}] 
+Öncelikle $ \overline{A \setminus B} \subseteq \overline{A} \setminus \overline{B} $ daima sağlanmaz.  $  \mathbb{R} $ standart uzayında $ A=(0, 1) $ ve $ B=(1,2) $ alınırsa 
+\begin{equation}
+\overline{A\setminus B}= \overline{(0, 1)} = [0, 1]
+\end{equation}
+ve
+\begin{equation}
+\overline{A} \setminus \overline{B}=[0, 1]\setminus [1, 2]= [0, 1)
+\end{equation}
+olup (1) ve (2) den $ \overline{A \setminus B} \nsubseteq \overline{A} \setminus \overline{B} $ olduğu görülür.\\
+\\
+$  \overline{A} \setminus \overline{B}\subseteq \overline{A \setminus B} $ olduğunu gösterelim. İki durumda inceleyelim.\\
+
+i) $A\setminus B= \emptyset$ durumunda
+\begin{eqnarray}
+A\setminus B=\emptyset &\Rightarrow & A\subseteq B \nonumber\\
+&\Rightarrow & \overline{A}\subseteq \overline{B}  \nonumber
+\end{eqnarray}
+olur. Buradan
+\begin{displaymath}
+\overline{A\setminus B}= \overline{\emptyset }=\emptyset =\overline{A}\setminus \overline{B}
+\end{displaymath}
+olup istediğimiz özellik sağlanır.\\
+\\
+ii) $A\setminus B\neq \emptyset$ durumunu inceleyelim. $x\in \overline{A}\setminus \overline{B}$ alıyoruz. Yani
+\begin{eqnarray}
+\forall U\in \mathcal{N}_{x} :[A \cap U\neq\emptyset ] \, \wedge\, \exists U_{0}\in \mathcal{N}_{x} :[B \cap U_{0}=\emptyset]\nonumber 
+\end{eqnarray}
+dir. $\exists U_{0}\in \mathcal{N}_{x} $ için $B \cap U_{0}=\emptyset $ ise $x\notin B$ diyebiliriz, aksi halde arakesitin sonucu en azından $x$ i içerir ve boştan farklı olurdu. Demek ki $x\in B^{c}$ dir. O halde
+\begin{displaymath}
+\forall U\in \mathcal{N}_{x}: B^{c}\cap U\neq \emptyset
+\end{displaymath}
+yazabiliriz. Bu bilgiyi kullanırsak
+\begin{eqnarray}
+\forall U\in \mathcal{N}_{x} :[A \cap U\neq\emptyset]\, \wedge\, \forall U\in \mathcal{N}_{x} :[B^{c} \cap U\neq\emptyset]\nonumber
+\end{eqnarray}
+elde ederiz. Çünkü $A\setminus B \neq \emptyset$ ve ayrıca $\forall U\in \mathcal{N}_{x}$ için $A\cap U\neq \emptyset$ ve $B^{c}\cap U\neq \emptyset$ olduğundan 
+\begin{eqnarray}
+\forall U\in \mathcal{N}_{x} :[A \cap B^{c}\cap U\neq\emptyset] \nonumber
+\end{eqnarray}
+olur. Dolayısıyla $x\in \overline{A\setminus B}$ bulduk. Sonuç olarak $\overline{A}\setminus \overline{B} \subseteq \overline{A\setminus B}$ bulunur.
+\end{enumerate}
+
+
+\item[\textbf{12.}]
+$ (X, \tau) $ bir Hausdorff uzay olsun. $ A\subseteq X $ kümesi üzerindeki alt uzay topolojisinin
+\begin{displaymath}
+\tau_{A}:= \{A\cap U \mid U \in \tau\}
+\end{displaymath}
+olarak tanımlı olduğunu biliyoruz. $ x\neq y $ olmak üzere $ x, y \in A $ noktaları alalım. $ (X, \tau) $ Hausdorff uzay olduğundan $ x\in U_{x} $ ve $ y\in U_{y} $ olacak şekilde $ U_{x}, U_{y}\in \tau $ açık kümeleri vardır öyle  ki $ U_{x}\cap U_{y}=\emptyset $ tur. O halde $ A\cap U_{x}, A\cap U_{y} \in \tau_{A} $ olup $ x \in A\cap U_{x} $ ve $ y \in A\cap U_{y} $ dir. Ayrıca
+\begin{eqnarray}
+(A\cap U_{x})\cap(A\cap U_{y}) &=& A\cap \underbrace{U_{x}\cap U_{y}}_{\emptyset}\nonumber\\
+&=&A\cap \emptyset \nonumber\\
+&=&\emptyset \nonumber
+\end{eqnarray}
+elde ederiz. $ x, y \in A $ için $ A\cap U_{x}, A\cap U_{y} \in \tau_{A} $ bulunabildiği için $ (A, \tau_{A}) $ Hausdorff uzaydır.
+
+\item[\textbf{16.}]
+$ T_{1}=\mathbb{R} $ standart uzayı, \\$ T_{2}=\mathbb{R}_{K}$ K-topoloji , \\$ T_{3}=\tau_{c} $ sonlu tümleyen topoloji, \\$ T_{4}=\mathbb{R}_{\textit{l}} $ üst limit topolojisi, \\$ T_{5}= $ baz elemanları $(-\infty, a)  $ olan topoloji
+\begin{enumerate}
+\item[\textbf{a)}]
+$K:=\{ 1/n\; |\; n\in \mathbb{Z}^{+}\}$ kümesi için
+\begin{displaymath}
+\overline{K}=K\cup K'
+\end{displaymath}
+olduğunu biliyoruz. Bu bilgiden yararlanarak kapanış kümelerini kolayca bulabiliriz.\\
+$T_{1}$ topolojisinde $K'=\{0\}$ olup $\overline{K}=K\cup \{0\}$ dır.\\
+$T_{2}$ topolojisinde $K'=\emptyset$ olup $\overline{K}=K$ dır.\\
+$T_{3}$ topolojisinde $K'=\mathbb{R}$ olup $\overline{K}=\mathbb{R}$ dır.\\
+$T_{4}$ topolojisinde $K'=\emptyset$ olup $\overline{K}=K$ dır.\\
+$T_{5}$ topolojisinde $K'=\mathbb{R^{+}}$ olup $\overline{K}=\mathbb{R^{+}}$ dır.\\
+
+
+\item[\textbf{b)}]\begin{teo}
+$(X,\tau)$ ve $(X, \tau ')$ topolojileri arasında $\tau \subseteq \tau '$ ilişkisi varsa $\tau$ Hausdorff ise $\tau '$ de Hausdorff'tur.
+\end{teo}
+
+\begin{proof}
+$x\neq y$ için $U_{x}, U_{y}\in \tau$ vardır öyle ki $x\in U_{x}$, $y\in U_{y}$ ve $U_{x}\cap U_{y}=\emptyset$ dır.$\tau \subseteq \tau '$ olduğundan
+\begin{displaymath}
+U_{x}, U_{y}\in \tau \Rightarrow U_{x}, U_{y}\in \tau '
+\end{displaymath}
+dır. Yani $U_{x}$ ve $U_{y}$ de $\tau '$ de açıktır ve Hausdorff şartlarını zaten sağlıyor yukarıdan görüldüğü gibi.
+\end{proof}
+$T_{1}$ Hausdorff mu? Hausdorff değilse $\mathbf{T_{1}}$ mi?\\
+$x\neq y$ için $x\in U_{x}=(a-\varepsilon, a+\varepsilon )$ ve $y\in U_{y}=(b-\varepsilon, b+\varepsilon)$ $\mathbb{R}$ standart uzayında açıklardır. $\varepsilon = \frac{|a-b|}{3}$ alınırsa $U_{x}\cap U_{y}=\emptyset$ olup Hausdorff aksiyomunu sağlar. Dolayısıyla hem Hausdorff hem de $\mathbf{T_{1}}$ uzayıdır.\\
+
+$T_{2}$ Hausdorff mu? Hausdorff değilse $\mathbf{T_{1}}$ mi?\\
+Teorem 1'den dolayı Hausdorff'tur dolayısıyla $\mathbf{T_{1}}$ dir.\\
+
+$T_{3}=\tau_{c}$ Hausdorff mu? Hausdorff değilse $\mathbf{T_{1}}$ mi?\\
+\underline{X \textit{sonsuz} bir küme ise ;}
+\\$x\neq y$ için $x\in U_{x}$ ve $y\in U_{y}$ açıkları alalım. Bunlar $U_{x}, U_{y}\in \tau_{c}$ olup $U_{x}^{c}$ ve $U_{y}^{c}$ sonludur. Şimdi kabul edelim ki $U_{x}\cap U_{y}=\emptyset$ olsun. O halde
+\begin{displaymath}
+\underbrace{U_{x}^{c}}_{sonlu} \cap \underbrace{U_{y}^{c}}_{sonlu}=X
+\end{displaymath}
+
+olup sonlu iki kümenin arakesiti de sonludur. Fakat bu X in sonsuz olmasıyla çelişir. Çelişki $U_{x}\cap U_{y}=\emptyset$ kabulünden kaynaklandı. Demek ki Hausdorff şartını sağlayan açıklar bulamayız. Dolayısıyla  $\tau_{c}$ Hausdorff değildir.\\
+
+$x\neq y$ için $y\in X\setminus \{x\}$, $ x\notin X\setminus \{x\} $ ve $x\in X\setminus \{y\}$, $ y\notin X\setminus \{y\} $ olup tümleyenleri sırasıyla $\}x\}$ ve $\{y\}$ olduğundan açık kümelerdir. Açıkça görülür ki $T_{1}$ aksiyomunu sağlarlar. Dolayısıyla  $\tau_{c}$ bir $T_{1}$ uzaydır.\\
+
+\underline{X \textit{sonlu} bir küme ise ;}\\
+Zaten X in her alt kümesi sonlu olup tümleyenleri de X te sonludur. Böylece $\tau_{c}= P(X)$ olur. Ayrık topoloji olduğu için $x\neq y$ için $x\in \{x\}$ ve $y\in \{y\}$ alınırsa $\{x\}\cap \{y\}=\emptyset$ olup Hausdorff olma şartı sağlanır dolayısıyla $T_{1}$ uzayıdır.\\
+
+
+$T_{4}$ Hausdorff mu? Hausdorff değilse $\mathbf{T_{1}}$ mi?\\
+Teorem 1'den dolayı Hausdorff'tur dolayısıyla $\mathbf{T_{1}}$ dir.\\
+
+
+$T_{5}$ Hausdorff mu? Hausdorff değilse $\mathbf{T_{1}}$ mi?\\
+$T_{5}$ topolojisi $(-\infty, a)$ şeklindeki açıklardan oluşur. Bu yüzden herhangi iki açıktan biri diğerinin alt kümesidir. \\
+$x\neq y$ keyfi elemanları için $U_{x}$ ve $U_{y}$ açıkları alalım. Kabul edelim ki $x\in U_{x}, y\notin U_{x}$ ve $y\in U_{y}, x\notin U_{y}$ şartı sağlansın. $T_{5}$ topolojisinde $U_{x}\subset U_{y}$ veya $U_{y}\subset U_{x}$ olduğundan kabulümüz çelişki arz eder. $\mathbf{T_{1}}$ aksiyomu sağlanmaz, dolayısıyla $T_{5}$ Hausdorff uzay da değildir.
+\end{enumerate}
+
+\item[\textbf{20.}]
+
+\begin{enumerate}
+\item[\textbf{a)}]
+$ A:= \{x\times y \mid y=0 \}$\\
+$ \stackrel{\;\circ}{A}=\emptyset $\\
+$ \partial A=A$
+
+\item[\textbf{b)}]
+$ B:= \{x\times y \mid x\geq 0\; \wedge \; y\neq 0\}$\\
+$ \stackrel{\;\circ}{B}=B$\\
+$ \partial B=\{0\}\times \mathbb{R} \cup \mathbb{R}^{+} \times \{0\} $
+
+\item[\textbf{c)}]
+$ C:= A\cup B$\\
+$ \stackrel{\;\circ}{C}=\mathbb{R^{+}}\times \mathbb{R}$\\
+$ \partial C=\{0\}\times\mathbb{R}\cup \mathbb{R^{-}}\times \{0\} $
+
+\item[\textbf{d)}]
+$ D:= \{x \times y \mid x \in \mathbb{Q} \}$\\
+$ \stackrel{\;\circ}{D}= \emptyset$\\
+$ \partial D=\mathbb{R}\times \mathbb{R} $
+
+\item[\textbf{e)}]
+$ E:= \{x\times y \mid  0 < x^{2}-y^{2}\leqslant 1 \}$\\
+$ \stackrel{\;\circ}{E}=\{x\times y \mid  0< {x^{2} - y^{2}}< 1 \}$\\
+$ \partial E=\{x\times y \mid  |x|=|y| \; \vee\; x^{2}-y^{2}=1 \} $
+
+\item[\textbf{f)}]
+$ F:= \{x\times y \mid x\geq 0\; \wedge \; y\neq 0\}$\\
+$ \stackrel{\;\circ}{F}=\{x\times y \mid  x\neq 0\; \wedge\; y<\dfrac{1}{x} \}$\\
+$ \partial F=\{x\times y \mid x=0\; \vee\; y=\dfrac{1}{x} \} $
+
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}

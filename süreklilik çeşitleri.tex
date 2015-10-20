@@ -1,0 +1,222 @@
+
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mitpress}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Tuesday, March 31, 2015 14:05:14}
+%TCIDATA{LastRevised=Wednesday, April 01, 2015 02:55:54}
+%TCIDATA{SuppressPackageManagement}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\A Simple MIT Press Article">}
+%TCIDATA{CSTFile=LaTeX Article (bright).cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{Counters=arabic,1}
+%TCIDATA{AllPages=
+%H=36
+%F=36
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Tan\i m}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Not}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newdimen\dummy
+\dummy=\oddsidemargin
+\addtolength{\dummy}{72pt}
+\marginparwidth=.5\dummy
+\marginparsep=.1\dummy
+\input{tcilatex}
+\begin{document}
+
+\title{S\"{u}reklilik \c{C}e\c{s}itleri}
+\author{Hakan ERG\"{U}L}
+
+\section{S\"{u}reklilik \c{C}e\c{s}itleri}
+
+\begin{definition}
+$A\subseteq 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bo\c{s} olmayan bir k\"{u}me, $f:A\rightarrow 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bir fonksiyon ve $a\in A$ olsun. Her $\varepsilon >0$ ve her $x\in A$ i%
+\c{c}in%
+\[
+\left\vert x-a\right\vert <\delta \Rightarrow \left\vert
+f(x)-f(a)\right\vert <\varepsilon 
+\]%
+\c{s}art\i n\i\ sa\u{g}layan $\delta =\delta (\varepsilon ,a)$ pozitif say\i
+s\i\ varsa \textquotedblleft $f$ fonksiyonu $a$ noktas\i nda s\"{u}%
+reklidir\textquotedblright\ denir.\qed
+\end{definition}
+
+\begin{definition}
+$A\subseteq 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bo\c{s} olmayan bir k\"{u}me, $f:A\rightarrow 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bir fonksiyon ve $a\in A$ olsun. $D(a;\delta )$, $a$ n\i n $\delta $
+civar\i\ olmak \"{u}zere her $\varepsilon >0$ i\c{c}in 
+\[
+f(A\cap D(a;\delta ))\subseteq D(f(a);\varepsilon )
+\]%
+olacak \c{s}ekilde $\delta =\delta (\varepsilon ,a)>0$ say\i s\i\ varsa $f$
+fonksiyonu $a$ noktas\i nda s\"{u}reklidir.$\qed$
+\end{definition}
+
+\begin{definition}
+$A\subseteq 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bo\c{s} olmayan bir k\"{u}me, $f:A\rightarrow 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bir fonksiyon ve $a\in A$ olsun.
+
+\begin{enumerate}
+\item E\u{g}er $a$\textbf{\ noktas\i\ }$A$\textbf{\ n\i n bir y\i \u{g}\i
+lma noktas\i ysa} $f$ fonksiyonunun $a$ noktas\i nda s\"{u}rekli olmas\i\ i%
+\c{c}in gerek ve yeter \c{s}art 
+\[
+\lim_{x\rightarrow a}f(x)=f(a)
+\]%
+olmas\i d\i r. Yani \c{s}u \"{u}\c{c} \c{s}art sa\u{g}lanmal\i d\i r:
+
+\begin{enumerate}
+\item $f$ fonksiyonu $a$ noktas\i nda tan\i ml\i\ olmal\i\ ($f(a)$ n\i n
+anlaml\i\ olabilmesi i\c{c}in)
+
+\item $f$ fonksiyonunun $a$ noktas\i nda limiti olmal\i 
+
+\item $f$ fonksiyonunun $a$ noktas\i ndaki limiti, $f(a)$ ya e\c{s}it
+olmal\i 
+\end{enumerate}
+
+\item E\u{g}er $a$\textbf{\ noktas\i\ }$A$\textbf{\ n\i n bir y\i \u{g}\i
+lma noktas\i\ de\u{g}ilse,} yani \textbf{ayr\i k nokta} ise $f$ fonksiyonu $a
+$ noktas\i nda a\c{s}ikar bi\c{c}imde s\"{u}rekli olur. $a$ n\i n ayr\i k
+nokta olmas\i ndan dolay\i\ 
+\[
+\exists \delta _{0}>0\text{ \"{o}yle ki }A\cap D(a;\delta _{0})=\emptyset 
+\]%
+diyebiliriz. Tan\i m 2'den her $\varepsilon >0$ i\c{c}in%
+\[
+f(A\cap D(a;\delta _{0}))=f(\emptyset )=\emptyset \subseteq
+D(f(a);\varepsilon )
+\]%
+olacak \c{s}ekilde $\delta _{0}>0$ say\i s\i\ bulduk. \.{I}spat\i m\i z
+tamamlanm\i \c{s}t\i r.\qed
+\end{enumerate}
+\end{definition}
+
+\begin{definition}
+(\textbf{Par\c{c}al\i\ S\"{u}reklilik) }Bir fonksiyonun tan\i ml\i\ oldu\u{g}%
+u aral\i k, fonksiyonun s\"{u}rekli oldu\u{g}u sonlu say\i da a\c{c}\i k(u%
+\c{c} noktalar\i\ \c{c}\i kar\i lm\i \c{s}) alt aral\i \u{g}a b\"{o}l\"{u}%
+nebiliyorsa ve fonksiyon her bir alt aral\i \u{g}\i n u\c{c} noktalar\i nda
+sonlu bir limite sahipse, fonksiyon bu aral\i kta par\c{c}al\i\ s\"{u}%
+reklidir denir. \qed
+\end{definition}
+
+\begin{definition}
+\bigskip \textbf{(Dizisel S\"{u}reklilik) } $X$ ve $Y$ bo\c{s} olmayan k\"{u}%
+meler, $f:X\rightarrow Y$ bir fonksiyon ve $a\in X$ olsun. $X$ k\"{u}%
+mesindeki $a$ ya yak\i nsayan her $\left\{ x_{n}\right\} $ dizisi i\c{c}in $%
+\left\{ f(x_{n})\right\} $ dizisi de $f(a)$ ya yak\i ns\i yorsa $f$
+fonksiyonu $a$ noktas\i nda dizisel s\"{u}reklidir.$\qed$
+\end{definition}
+
+\begin{remark}
+S\"{u}rekli her fonksiyon dizisel s\"{u}reklidir. Tersi her zaman do\u{g}ru
+de\u{g}ildir. Ancak metrik uzaylarda dizisel s\"{u}reklilik, s\"{u}reklili%
+\u{g}e denk olur.
+\end{remark}
+
+\begin{definition}
+(\textbf{D\"{u}zg\"{u}n S\"{u}reklilik) }$A\subseteq 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bo\c{s} olmayan bir k\"{u}me ve $f:A\rightarrow 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ bir fonksiyon olsun. Her $\varepsilon >0$ ve her $x,y\in A$ i\c{c}in%
+\[
+\left\vert x-y\right\vert <\delta \Rightarrow \left\vert
+f(x)-f(y)\right\vert <\varepsilon 
+\]%
+olacak \c{s}ekilde yaln\i z $\varepsilon $ say\i s\i na ba\u{g}l\i\ olarak de%
+\u{g}i\c{s}en bir $\delta =\delta (\varepsilon )$ pozitif say\i s\i\ varsa $f
+$ fonksiyonu $A$ k\"{u}mesinde d\"{u}zg\"{u}n s\"{u}reklidir.\qed
+\end{definition}
+
+\begin{remark}
+D\"{u}zg\"{u}n s\"{u}rekli her fonksiyon s\"{u}reklidir, fakat tersi her
+zaman do\u{g}ru de\u{g}ildir. Ancak kapal\i\ ve s\i n\i rl\i\ bir aral\i kta
+s\"{u}rekli fonksiyon, ayn\i\ zamanda d\"{u}zg\"{u}n s\"{u}reklidir.
+\end{remark}
+
+\begin{definition}
+\textbf{(Mutlak S\"{u}reklilik) }$f:\left[ a,b\right] \rightarrow 
+%TCIMACRO{\U{211d} }%
+%BeginExpansion
+\mathbb{R}
+%EndExpansion
+$ fonksiyonu verilsin. Her $\varepsilon >0$ ve her $\left\{
+(a_{k},b_{k})\right\} _{k=1}^{n}$ $\subseteq (a,b)$ sonlu ayr\i k a\c{c}\i k
+aral\i klar dizisi i\c{c}in%
+\[
+\dsum_{k=1}^{n}\left[ b_{k}-a_{k}\right] <\delta \Rightarrow
+\dsum_{k=1}^{n}\left\vert f(b_{k})-f(a_{k})\right\vert <\varepsilon 
+\]%
+\c{s}art\i n\i\ sa\u{g}layan $\delta >0$ say\i s\i\ varsa \textquotedblleft $%
+f$ fonksiyonu $\left[ a,b\right] $ aral\i \u{g}\i nda mutlak s\"{u}%
+reklidir\textquotedblright\ denir.\qed
+\end{definition}
+
+\bigskip
+
+\end{document}
