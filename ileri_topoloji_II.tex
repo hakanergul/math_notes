@@ -1,0 +1,83 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{pxfonts}
+
+\newtheorem{theorem}{Teorem}
+\newtheorem{ispat}{Kan{\i}t}
+\newtheorem{tanim}{Tan{\i}m}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\begin{document}
+\title{\.{I}leri Topoloji II Ders Notlar{\i}m}
+\author{Hakan ERG\"{U}L\\
+  Matematik Bolumu,\\
+  Ataturk Universitesi,\\
+  \texttt{hknrgl@gmail.com}}
+\maketitle
+\section*{\c{C}arp{\i}m ve B\"{o}l\"{u}m Uzaylar{\i}}
+\subsection*{\c{C}arp{\i}m Uzaylar{\i}}
+\label{sec:carp_bol}
+\fbox{\begin{minipage}{30em}
+Hocan{\i}n takip edecegi kaynaklar:
+\begin{itemize}
+\item Seymour Lipschutz - General Topology
+\item Ali B\"{u}lb\"{u}l - Genel Topoloji
+\item \c{S}aziye Y\"{u}ksel - Topoloji
+\end{itemize}
+\end{minipage}}
+\vspace{5mm}\\
+$X$ herhangi bir k\"{u}me, $(Y,\mathcal{T}')$ bir topolojik uzay ve $f:X\to (Y,\mathcal{T}')$ bir fonksiyon olsun. $f$ fonksiyonunu s\"{u}rekli yapan en kaba(a\c{c}{\i}k k\"{u}me say{\i}s{\i} en az) topolojinin ara\c{s}t{\i}r{\i}lmas{\i} problemi bizi \texttt{izd\"{u}\c{s}el(ba\c{s}lang{\i}\c{c}) topoloji} kavram{\i}na g\"{o}t\"{u}r\"{u}r.
+\vspace{1mm}\\
+
+Tersine $(X,\mathcal{T})$ bir topolojik uzay, $Y$ herhangi bir k\"{u}me ve $f:(X,\mathcal{T})\to Y$ bir fonksiyon olsun. $f$ fonksiyonunu s\"{u}rekli k{\i}lan $Y$ \"{u}zerindeki en ince(kuvvetli, a\c{c}{\i}k k\"{u}me say{\i}s{\i} en fazla) topolojinin ara\c{s}t{\i}r{\i}lmas{\i} problemi de bizi \texttt{t\"{u}mel(biti\c{s}) topolojisi} kavram{\i}na g\"{o}t\"{u}r\"{u}r.
+\vspace{1mm}\\
+
+Ayr{\i}ca bu iki problem $f_\alpha:(X,\mathcal{T}_\alpha)\to Y$ ve $f_\alpha:X\to (Y,\mathcal{T}_\alpha')$ fonksiyon ailelerine de geni\c{s}letilebilir. B\"{o}ylece \textsc{\c{c}arp{\i}m} ve \textsc{b\"{o}l\"{u}m} uzaylar{\i} kar\c{s}{\i}m{\i}za \c{c}{\i}kar.
+
+\subsubsection*{\.{I}zd\"{u}\c{s}el(Ba\c{s}lang{\i}\c{c}) Topoloji}
+
+\begin{theorem}
+  $X$ herhangi bir k\"{u}me $(Y,\mathcal{T}')$ bir topolojik uzay ve $f:X\to (Y,\mathcal{T}')$ bir fonksiyon olsun. Bu durumda $$\mathcal{T} = \{ G\subset X\mid G=f^{-1}(H),\quad  H\in \mathcal{T}' \} $$ ailesi $X$ \"{u}zerinde bir topolojidir. Bu topoloji $f$ fonksiyonunu s\"{u}rekli k{\i}lan $X$ \"{u}zerindeki en kaba topolojidir.
+\end{theorem}
+
+\begin{proof}
+$\mathcal{T}$ nun $X$ \"{u}zerinde bir topoloji oldu\u{g}unu g\"{o}sterelim.
+\begin{enumerate}[label=(\roman*),leftmargin=1cm,series=lafter]
+  \item $X$ ve $\emptyset$, $\mathcal{T}$ nun eleman{\i} oldu\u{g}unu g\"{o}sterelim. $Y\in \mathcal{T} '$ i\c{c}in $f^{-1}(Y)=X\in \mathcal{T} $ ve yine $\emptyset \in \mathcal{T} '$ i\c{c}in $f^{-1}(\emptyset)=\emptyset \in \mathcal{T}$ olup $(i)$ \c{s}art{\i} sa\u{g}lan{\i}r. 
+   \item Keyfi say{\i}da eleman{\i}n birle\c{s}iminin yine $\mathcal{T}$ ailesine ait oldu\u{g}unu g\"{o}sterelim.$\mathcal{T}$ ailesinin $$G_1=f^{-1}(H_1)\quad H_1\in \mathcal{T}'$$
+ $$G_2=f^{-1}(H_2)\quad  H_2\in \mathcal{T}'$$ $$\vdots{}$$elemanlar{\i}n{\i} alal{\i}m.  Buradan
+ \begin{eqnarray*}
+   G_1\cup G_2\cup \cdots &=& f^{-1}(H_1)\cup f^{-1}(H_2)\cup \cdots\\
+   &=& f^{-1}(\underbrace{H_1\cup H_2\cup \cdots})\in \mathcal{T} \\
+   & &\hspace{14mm} \in \mathcal{T}'
+ \end{eqnarray*}
+elde ederiz ki bu da $(ii)$ \c{s}art{\i} da sa\u{g}lanm{\i}\c{s} oldu.
+
+  \item Sonlu say{\i}da eleman{\i}n{\i}n kesi\c{s}imi yine $\mathcal{T}$ da olmal{\i}, bunu keyfi iki eleman i\c{c}in g\"{o}stererek kan{\i}tlayabiliriz.$\mathcal{T}$ nun $$G_1=f^{-1}(H_1) \quad H_1\in \mathcal{T}'$$ $$G_2=f^{-1}(H_2) \quad H_2\in \mathcal{T}' $$ elemanlar{\i} i\c{c}in
+    \begin{eqnarray*}
+      G_1\cap G_2&=&f^{-1}(H_1)\cap f^{-1}(H_2)\\
+      &=&f^{-1}(\underbrace{H_1\cap H_2})\in \mathcal{T} \\
+      & &\hspace{10mm} \in \mathcal{T}'
+    \end{eqnarray*}
+olup $(iii)$ \c{s}art{\i} da sa\u{g}lanm{\i}\c{s} olur.\\
+
+\c{S}imdi de $\mathcal{T}$ nun $f$ fonksiyonunu s\"{u}rekli yapan $X$ \"{u}zerindeki en kaba topoloji oldu\u{g}unu g\"{o}stermek kald{\i}.
+\end{enumerate}
+
+$\mathcal{T}''$, $X$ \"{u}zerinde $f$ yi s\"{u}rekli k{\i}lan $\mathcal{T}$ dan farkl{\i} herhangi bir topoloji olsun. Biz $\mathcal{T} \subset \mathcal{T}''$ oldu\u{g}unu g\"{o}sterelim. Biliyoruz ki $$\forall G\in \mathcal{T}\hspace{3mm} G=f^{-1}(H),\hspace{2mm} H\in \mathcal{T}$$
+d{\i}r. $H\in \mathcal{T}'$ ise $f^{-1}(H)=G\in \mathcal{T}''$ olmal{\i}d{\i}r. Buradan $\mathcal{T}\subset \mathcal{T}''$ olacakt{\i}r.
+\end{proof}
+
+\begin{tanim}[izd\"{u}\c{s}el topoloji] $X$ herhangi bir k\"{u}me ve $(Y,\mathcal{T}')$ bir topolojik uzay ve $f:X\to (Y,\mathcal{T})$ bir fonksiyon olsun. $f$ fonksiyonunu s\"{u}rekli k{\i}lan $X$ \"{u}zerindeki en kaba topoloji olan $$\mathcal{T}=\{ G\subset X \mid G=f^{-1}(H), \hspace{2mm} H\in \mathcal{T}'$$ topolojisine $f$ fonksiyonunun $X$ \"{u}zerinde \"{u}retti\u{g}i \texttt{"izd\"{u}\c{s}el topoloji"} veya \texttt{"ba\c{s}lang{\i}\c{c} topolojisi"} denir.
+\end{tanim}
+
+Bu tan{\i}m $\{f_\alpha \}_{\alpha \in \Lambda}$ fonksiyon ailelerine geni\c{s}letilebilebilir.
+\begin{tanim}
+$X$ herhangi bir k\"{u}me, $\{ (X_\alpha, \mathcal{T}_\alpha) \}_{\alpha \in \Lambda}$ topolojik uzaylar ailesi ve her $\alpha \in \Lambda$ i\c{c}in $$ f_\alpha : X\to (X_\alpha, \mathcal{T}_\alpha) $$ fonksiyonlar{\i} verilsin. Her bir $f_\alpha$ fonksiyonunu s\"{u}rekli k{\i}lan $X$ \"{u}zerindeki topolojilerin en kabas{\i}na $\{ f_\alpha \}_{\alpha \in \Lambda}$ fonksiyon ailesinin \"{u}retti\u{g}i \texttt{izd\"{u}\c{s}el topoloji} denir.
+\end{tanim}
+
+Bu tan{\i}ma g\"{o}re $\mathcal{S}=\{ f^{-1}_\alpha(G_\alpha) \mid G_\alpha \in \mathcal{T}_\alpha \}$ ailesi, bu izd\"{u}\c{s}el topoloji i\c{c}in bir \emph{alttaban}dır. 
+\vfill \hfill \texttt{ilk ders sonu, 20 Ekim 2015 }
+
+\end{document}
