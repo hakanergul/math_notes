@@ -1,2 +1,0 @@
-Contraction mappings, isometries and orthogonal projections are all non-expansive mappings. The study of non-expansive mappings has been one of the main features in recent developments of fixed point theory: see for instance Browder (1973).
-There are some interesting unsolved problems. We will sketch (6.4) an application to non-linear equations of evolution.* {Smart - Fixed Point Theorems - page 35} *

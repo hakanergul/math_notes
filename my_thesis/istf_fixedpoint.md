@@ -1,0 +1,4 @@
+Contraction mappings, isometries and orthogonal projections are all non-expansive mappings. The study of non-expansive mappings has been one of the main features in recent developments of fixed point theory: see for instance Browder (1973).
+There are some interesting unsolved problems. We will sketch (6.4) an application to non-linear equations of evolution.* {Smart - Fixed Point Theorems - page 35} *
+
+Because of its important linkages with the theory of monotone and accretive operators, fixed point theory for nonexpansive mappings has long been considered a fundamental part of nonlinear functional analysis. However, the attempt to classify those subsets of Banach spaces which have the fixed point property for such mappings has now become a study in its own right - one which has yielded many elegant results and led to numerous discoveries in Banach space geometry.* {Khamsi & Asuman Aksoy - Nonstandart Methods in Fixed Point Theory - Preface page v} *
