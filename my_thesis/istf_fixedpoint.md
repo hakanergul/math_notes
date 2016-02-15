@@ -6,3 +6,7 @@ Because of its important linkages with the theory of monotone and accretive oper
 Kirk [114] observed that the presence of a geometric property called "normal structure" guarantees that weakly compact convex subsets have the fixed point property.* {Khamsi & Asuman Aksoy - Nonstandart Methods in Fixed Point Theory - page 51} *
 
 This theorem(Banach Contraction Principle) has had many applications, but suffers from one drawback - the definition requires that T be continuous throught X. In 1968 Kannan [14] gave an example of a contractive definition that does not require the continuity of T. There then followed a flood of papers involving contractive definitions, many of which do not require the continuity of T. In a series of papers [24], [26], [19], and [22], the author and Sehie Park have partially ordered many of these contractive definitions and have indicated the most general fixed point theorems. To demonstrate that many contractive definitions require T be continuous at a fixed point, it will be sufficient to show that such is the case for the most general definitions. We shall first deal with a single map. * {Brown - Fixed Point Theory and Its Appl. içinde Rhoades - COntractive Definitions and Continuity page 233} *
+
+We do not know whether Caristi’s theorem fully extends
+to b-metric spaces. However, as we show in Chap. 14, it does extend to partial
+metric spaces. {Kirk;Shahzad - Fixed Point Theory Distance Spaces - page 129}
