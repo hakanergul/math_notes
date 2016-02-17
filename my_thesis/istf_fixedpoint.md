@@ -15,3 +15,7 @@ Theorem 4.1.3 (Caristi’s ﬁxed point theorem) –LetX be a complete metric sp
 d(x,Tx) ≤ ϕ(x) − ϕ(Tx) for all x∈ X. (4.3)
 Then there exists a point v ∈ X such that v = Tv and ϕ(v) < ∞. 
 REMARK: The ﬁxed point of the mapping T in Theorem 4.1.3 need not be unique. {Agarwal;O'Regan;Sahu - Fixed Pointy Theory  for Lipschitzian-type - page 178}
+
+(Boyd and Wong’s ﬁxed point theorem)LetX be a complete metric space and T : X → X a mapping that satisﬁes 
+d(Tx,Ty) ≤ ψ(d(x,y)) for all x,y ∈ X (4.7) 
+where ψ : R+ → R+ is upper semicontinuous function from the right (i.e., λ_i ↓ λ ≥ 0 ⇒ limsup_{i→∞}ψ(λ_i) ≤ ψ(λ)) such that ψ(t) <t for each t>0.Then T has a unique ﬁxed point v ∈ X. Moreover, for each x ∈ X, lim_{n→∞}T^n x = v.
