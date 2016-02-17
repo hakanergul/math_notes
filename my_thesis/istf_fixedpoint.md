@@ -10,3 +10,8 @@ This theorem(Banach Contraction Principle) has had many applications, but suffer
 We do not know whether Caristi’s theorem fully extends
 to b-metric spaces. However, as we show in Chap. 14, it does extend to partial
 metric spaces. {Kirk;Shahzad - Fixed Point Theory Distance Spaces - page 129}
+
+Theorem 4.1.3 (Caristi’s ﬁxed point theorem) –LetX be a complete metric space and ϕ : X → (−∞,∞] a proper, bounded below and lower semi-continuous function. Let T : X → X be a mapping such that 
+d(x,Tx) ≤ ϕ(x) − ϕ(Tx) for all x∈ X. (4.3)
+Then there exists a point v ∈ X such that v = Tv and ϕ(v) < ∞. 
+REMARK: The ﬁxed point of the mapping T in Theorem 4.1.3 need not be unique. {Agarwal;O'Regan;Sahu - Fixed Pointy Theory  for Lipschitzian-type - page 178}
