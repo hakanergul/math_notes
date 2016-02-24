@@ -1,0 +1,91 @@
+\documentclass[10pt]{amsart}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\renewcommand{\abstractname}{\"OZET}
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorem}
+\newtheorem{proposition}{Onerme}
+\newtheorem*{kanit}{\emph{Kan\i t}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Tan\i m}
+
+
+
+\title{A fixed point theorem for weakly Zamfirescu mappings }
+\author{Ariza-Ruiz, David Jimenez-Melado, Antonio Lopez-Acedo,Genaro}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent Zamfirescu 1975'te Banach, Kannan ve Chatterjea tipi sabit nokta teoremlerini genelleyen bir sabit nokta teoremi yayinladi. Bu makalede Dugundji ve Granas'in yontemi kullanilarak bu teorem, zayif Zamfirescu donusumune genellenecek.
+\end{abstract}
+
+\section*{Giris}
+Banach Daralma Ilkesi, Kannan ve Chatterjea tanimlari verilip bunlarin birbirinden bagimsiz olduklari belirtildi.
+
+\definition $(X,d)$  metrik uzay ve $f: X \rightarrow X$ donusumu $\alpha \in [0,1)$ olmak uzere 
+\begin{equation} 
+  d(f(x), f(y))\leq \alpha\max\bigg\{ d(x,y), \frac{1}{2}[d(x,f(x))+d(y,f(y))], \frac{1}{2}[d(y,f(x))+d(y,f(x))] \bigg\} 
+\tag*{[Z]}
+\end{equation}
+sartini sagliyorsa bu donusume \texttt{Zamfirescu donusumu} denir.
+
+\begin{enumerate}[\textbf{Not} 1.]
+\item  Tam metrik uzayda Zamfirescu donusumu bir tek sabit noktaya sahiptir.
+\item  Zamfirescu donusumu, Banach Daralma Ilkesi, Kannan ve Chatterjea sabit nokta teoremlerinden daha geneldir.
+\end{enumerate}
+
+\subsection*{Zayif Daraltan Donusum}
+  Dugundji ve Granas [7], Banach Daralma Ilkesindeki $\alpha \in [0,1)$ sayisi $\alpha(x,y)$ fonksiyonuyla degistirildi. Yani $f:X \rightarrow X$ donusumu,
+ $\alpha :XxX \rightarrow [0,1]$ fonksiyonu her $0<a\leq b$ icin 
+\begin{equation*} 
+  \sup\big\{\alpha(x,y) : 0\leq d(x,y) \leq b \big\} < 1
+\end{equation*}
+sartini saglayan bir fonksiyon olmak uzere her $x,y\in X$ icin
+\begin{equation*} 
+  d(f(x), f(y))\leq \alpha(x,y)d(x,y) 
+\end{equation*}
+oluyorsa $f$ donusumune \texttt{zayif daraltandir} denir.
+
+Bu mantik kullanilarak [8] de Kannan donusumu, zayif Kannan donusumune genellestirildi. Chatterjea de benzer olarak denenebilir. Ciric'in sabit nokta teoremi bu yontemle zayif Ciric olamiyor. Ters ornek Sastry [9] 'da mevcut. Fakat Zamfirescu donusumu icin zayif Zamfirescu donusumu elde edebiliyoruz.
+
+\subsection*{Zayif Zamfirescu Donusumleri}
+ \definition  $(X,d)$ metrik uzay olsun. $f:X \rightarrow X$ donusumu,
+ $\alpha :XxX \rightarrow [0,1]$ fonksiyonu her $0<a\leq b$ icin 
+\begin{equation*} 
+  \sup\big\{\alpha(x,y) : 0\leq d(x,y) \leq b \big\} < 1
+\end{equation*}
+sartini saglayan bir fonksiyon ve
+\begin{equation*} 
+  M_f= \max\bigg\{ d(x,y), \frac{1}{2}[d(x,f(x))+d(y,f(y))], \frac{1}{2}[d(y,f(x))+d(y,f(x))] \bigg\}
+\end{equation*}
+olmak uzere her $x,y\in X$ icin
+\begin{equation*} 
+  d(f(x), f(y))\leq \alpha(x,y)M_f(x,y) 
+\end{equation*}
+oluyorsa $f$ donusumune \texttt{zayif Zamfirescu donusumu} denir.
+
+\proposition  $(X,d)$ bir metrik uzay ve $D \subset X$ olsun. $f:D\rightarrow X$ bir zayif Zamfirescu donusumu ise $D$ de en fazla bir sabit noktasi vardir.
+\kanit $u$ ve $v$, $f$ donusumunun birbirinden farkli iki sabit noktasi olsun.$0<d(u,v)=r$ alinirsa
+
+\begin{equation*}
+  \theta(r/2,r)= \sup\big\{\alpha(x,y) : \frac{r}{2}\leq d(x,y) \leq r \big\} < 1
+\end{equation*}
+olmak uzere  $\alpha(u,v)\leq \theta(r/2, r)<1$ yazilabilir. Buradan
+\begin{align*}
+d(u,v)&=d(f(u),f(v))\\ &\leq \alpha(u,v)d(u,v)\\
+                    &\leq \theta(r/2,r)d(u,v)
+\end{align*}
+olup $d(u,v)$ leri sadelestirirsek $1<\theta(r/2,r)$ elde ederiz. Bu celiskidir. Demekki $u=v$ dir. \qed
+
+
+Devami gelecek hocam...
+\subsection*{Kaynaklar}
+
+
+\end{document}
