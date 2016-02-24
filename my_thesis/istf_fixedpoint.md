@@ -5,8 +5,38 @@ Because of its important linkages with the theory of monotone and accretive oper
 
 Kirk [114] observed that the presence of a geometric property called "normal structure" guarantees that weakly compact convex subsets have the fixed point property.* {Khamsi & Asuman Aksoy - Nonstandart Methods in Fixed Point Theory - page 51} *
 
-This theorem(Banach Contraction Principle) has had many applications, but suffers from one drawback - the definition requires that T be continuous throught X. In 1968 Kannan [14] gave an example of a contractive definition that does not require the continuity of T. There then followed a flood of papers involving contractive definitions, many of which do not require the continuity of T. In a series of papers [24], [26], [19], and [22], the author and Sehie Park have partially ordered many of these contractive definitions and have indicated the most general fixed point theorems. To demonstrate that many contractive definitions require T be continuous at a fixed point, it will be sufficient to show that such is the case for the most general definitions. We shall first deal with a single map. * {Brown - Fixed Point Theory and Its Appl. içinde Rhoades - COntractive Definitions and Continuity page 233} *
+This theorem(Banach Contraction Principle) has had many applications, but suffers from one drawback - the definition requires that T be continuous throught X. In 1968 Kannan [14] gave an example of a contractive definition that does not require the continuity of T. There then followed a flood of papers involving contractive definitions, many of which do not require the continuity of T. In a series of papers [24], [26], [19], and [22], the author and Sehie Park have partially ordered many of these contractive definitions and have indicated the most general fixed point theorems. To demonstrate that many contractive definitions require T be continuous at a fixed point, it will be sufficient to show that such is the case for the most general definitions. We shall first deal with a single map. * {Brown - Fixed Point Theory and Its Appl. içinde Rhoades - Contractive Definitions and Continuity page 233} *
 
-We do not know whether Caristi’s theorem fully extends
-to b-metric spaces. However, as we show in Chap. 14, it does extend to partial
-metric spaces. {Kirk;Shahzad - Fixed Point Theory Distance Spaces - page 129}
+We do not know whether Caristi’s theorem fully extends to b-metric spaces. However, as we show in Chap. 14, it does extend to partial metric spaces. {Kirk;Shahzad - Fixed Point Theory Distance Spaces - page 129}
+
+Theorem 4.1.3 (Caristi’s ﬁxed point theorem) –Let X be a complete metric space and ϕ : X → (−∞,∞] a proper, bounded below and lower semi-continuous function. Let T : X → X be a mapping such that 
+d(x,Tx) ≤ ϕ(x) − ϕ(Tx) for all x∈ X. (4.3)
+Then there exists a point v ∈ X such that v = Tv and ϕ(v) < ∞. 
+REMARK: The ﬁxed point of the mapping T in Theorem 4.1.3 need not be unique. {Agarwal;O'Regan;Sahu - Fixed Pointy Theory  for Lipschitzian-type - page 178}
+
+(Boyd and Wong’s ﬁxed point theorem)LetX be a complete metric space and T : X → X a mapping that satisﬁes 
+d(Tx,Ty) ≤ ψ(d(x,y)) for all x,y ∈ X (4.7) 
+where ψ : R+ → R+ is upper semicontinuous function from the right (i.e., λ_i ↓ λ ≥ 0 ⇒ limsup_{i→∞}ψ(λ_i) ≤ ψ(λ)) such that ψ(t) <t for each t>0.Then T has a unique ﬁxed point v ∈ X. Moreover, for each x ∈ X, lim_{n→∞}T^n x = v. {Agarwal;O'Regan;Sahu - Fixed Pointy Theory  for Lipschitzian-type - page 182-183}
+
+We now study an important generalization of the Boyd and Wong’s ﬁxed point theorem in which the control function ϕ is extended in a diﬀerent direction. Interestingly, in the following result the continuity condition on ϕ is replaced by lim_{n→∞} ϕ^n(t) = 0 for all t>0.
+Theorem 4.1.16 (Matkowski’s ﬁxed point theorem) –LetX be a complete metric space and T : X → X a mapping that satisﬁes
+d(Tx,Ty) ≤ ψ(d(x,y)) for all x,y ∈ X,
+where ψ :(0,∞) → (0,∞) is nondecreasing and satisﬁes lim_{n→∞}ψ^n(t)=0 for all t>0. Then T has a unique ﬁxed point v ∈ X and for each x ∈ X, lim_{n→∞} T^n x = v. {Agarwal;O'Regan;Sahu - Fixed Pointy Theory  for Lipschitzian-type - page 185}
+
+
+Most of the results presented in Section 4.1 may be found in Goebel and Kirk
+[59], Khamsi and Kirk [85], Kirk and Sims [91], and Martin [106]. Theorem 4.1.16
+ﬁrst appeared in Matkowski [108] as a generalization of the result of Boyd and
+Wong [22], and it was recently extended for non-self mappings in Reich and
+208 4. Existence Theorems in Metric Spaces
+Zaslavski [133](see also recent results of Agarwal, O’Regan and their coworkers
+[1, 117]).
+The notion of nearly non-Lipschitzian mappings was introduced by Sahu
+[137]. Some existence theorems for demicontinuous nearly contraction and
+nearly asymptotically nonexpansive mappings were also established in [137].
+The ﬁxed point theory of multivalued contraction self-mappings was ﬁrst
+proved in Nadler [115]. It was extended for multivalued non-self contraction
+mappings by Assad and Kirk [4].
+The results describes in Sections 4.3∼4.5 can be found in Lifschitz [97], Lim
+and Xu [99], and Takahashi [154].
+
