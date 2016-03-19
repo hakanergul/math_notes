@@ -1,9 +1,9 @@
 __Seminer Konusu__
 
-1. **A New Extension of Some Well Known Fixed Point Theorems in Metric Spaces
+1. *A New Extension of Some Well Known Fixed Point Theorems in Metric Spaces
 Kir M Kiziltunç H
 Mathematical Sciences Letters
-2013 vol: 1 (1) pp: 179-183**
+2013 vol: 1 (1) pp: 179-183*
 
 2. *On Some Well Known Fixed Point Theorems in b-Metric Spaces
 Kir M Kiziltunç H
