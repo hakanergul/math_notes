@@ -1,0 +1,126 @@
+\documentclass[sans,mathserif,8pt]{beamer}
+\usepackage{pxfonts}  
+\usepackage{eulervm}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+\usetheme{Warsaw}
+\usecolortheme{seagull}
+
+\title{Zamfirescu D\"on\"u\c{s}\"um\"un\"un Bir Genelle\c{s}tirmesi}
+\author{Hakan ERG\"UL}
+\institute{Atat\"{u}rk \"{U}niversitesi}
+\date{\today}
+
+{\setlength{\abovedisplayskip}{0pt}%
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Giri\c{s}}
+\subsection{Baz\i \ \"{u}nl\"{u} Sabit Nokta Teoremleri}
+
+\begin{frame}
+\frametitle{Baz\i \ \"{u}nl\"{u} Sabit Nokta Teoremleri}
+   $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ olmak \"{u}zere 
+   \begin{itemize}[<+-| alert@+>]
+
+   \item (Banach Daralma \.{I}lkesi[1])
+     \begin{equation} 
+       d(f(x), f(y))\leq \alpha d(x,y)
+\tag*{\textsc{[b]}}
+        \end{equation}
+   \item (Kannan D\"{o}n\"{u}\c{s}\"{u}m\"{u}[2])
+     \begin{equation} 
+       d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(x))+d(y,f(y))\big\}
+\tag*{\textsc{[k]}}
+         \end{equation}
+   \item (Chatterjea D\"{o}n\"{u}\c{s}\"{u}m\"{u}[3])
+     \begin{equation} 
+       d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(y))+d(y,f(x))\big\}
+\tag*{\textsc{[c]}}
+         \end{equation}
+   \end{itemize}
+
+\c{s}art\i n\i\ sa\u{g}l\i yorsa, $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i\ vard\i r.
+    \qed
+\end{frame}%bazi ünlü sabit nokta teoremleri
+
+
+\subsection{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
+\begin{frame}
+\frametitle{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
+ $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ ve $\beta , \gamma \in [0,\frac{1}{2}) $ olmak \"{u}zere her $x,y \in X$ i\c{c}in a\c{s}a\u{g}\i dakilerden en az biri do\u{g}rudur:
+
+    \begin{itemize}
+    \item $\begin{aligned} d(f(x), f(y))\leq \alpha d(x,y)
+      \end{aligned}$
+    \item
+      $\begin{aligned} d(f(x), f(y))\leq \beta \big\{
+        d(x,f(x))+d(y,f(y))\big\}
+      \end{aligned}$
+
+    \item
+      $\begin{aligned} d(f(x), f(y))\leq \gamma \big\{
+        d(x,f(y))+d(y,f(x))\big\}
+      \end{aligned}$
+
+    \item  
+\end{itemize}
+
+\begin{block}{Not}  
+\begin{itemize}[<+-| alert@+>]  
+\item Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} tam metrik uzayda bir tek sabit noktaya yak\i nsar.  
+\item Rhoades[] 'deki \emph{Theorem 1}. \emph{(xiv)} ve \emph{(xxv)}' den   Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n, \textsc{[b]}, \textsc{[k]} ve \textsc{[c]}'den daha genel oldu\u{g}u g\"or\"ul\"ur.
+\end{itemize}
+
+
+
+\end{block}
+\end{frame}%Zamfirescu dönüşümü ve bir proposition
+
+\subsection{Bir Tan\i m ve Yard\i mc\i\ Bir Teorem}
+\begin{frame}
+\begin{itemize}[<+-| alert@+>]  
+ 
+  \item[] \begin{definition}
+    $(X, d)$ bir metrik uzay ve $f:X\to X$ bir d\"{o}n\"{u}\c{s}\"{u}m olmak \"uzere bir $x_0 \in X$ noktas\i nda $\lim_{n\to \infty} d(f^n
+(x_0), f^{n+1} (x_0 )) = 0$ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"u $x_0$ noktas\i nda \texttt{asimptotik reg\"uler}dir denir
+  \end{definition}
+
+ \item[] \c{S}imdi Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden daha genel olan a\c{s}a\u{g}\i daki lemmay\i\ verelim:
+
+ \item[] \begin{lemma}
+  $(X,d)$ tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m,
+  $\alpha \in [0,1)$ olmak \"uzere
+  \begin{equation*}
+    d(f(x), f(y))\leq \alpha\max\bigg\{ d(x,y), \frac{1}{2}[d(x,f(x))+d(y,f(y))], \frac{1}{2}[d(y,f(x))+d(y,f(x))] \bigg\} 
+  \end{equation*}
+  \c{s}art\i n\i\ sa\u{g}l\i yorsa bu d\"{o}n\"{u}\c{s}\"{u}m bir tek sabit noktas\i\ vard\i r.\qed
+\end{lemma}
+
+  \item[] \begin{block}{Not}
+  \begin{enumerate}
+  \item Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden tam metrik uzayda bir tek sabit noktaya yak\i nsar.
+  \item Rhoades[] 'deki \emph{Theorem 1}. \emph{(xxv)}' de  g\"or\"uld\"u\u{g}\"u gibi yukar\i daki lemma,  Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden daha geneldir.  \item Dolay\i s\i yla lemmada verilen \c{s}artlar\i\ sa\u{g}layan d\"{o}n\"{u}\c{s}\"{u}m, \textsc{[b]}, \textsc{[k]} ve \textsc{[c]}'den daha geneldir.
+\end{enumerate}
+\end{block}
+\end{itemize}
+
+\end{frame}%yardimci teorem (zamfirescu dönüşümünün genel bir hali), ana teoremde kullanılacak
+
+\section{Ana Sonuclar}
+\subsection{\.{I}spatlanacak Olan Teorem}
+\begin{frame}
+  \begin{theorem}
+    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve $$M(x,y):=\bigg\{ d(x,y), \frac{d(x,f(x))+d(y,f(y))}{2}, \frac{d(x,f(y))+d(y,f(x))}{2} \bigg\}$$ olmak \"{u}zere her $x,y \in X$ i\c{c}in $$\psi\big(d(f(x),f(y)\big)\geq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)$$ e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"un\"un bir tek sabit noktas\i\ vard\i r.\qed 
+  \end{theorem}
+\end{frame}%ispatlanacak olanana teoremimiz
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -2,6 +2,7 @@
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{pxfonts}
 
 \renewcommand{\abstractname}{\"OZET}
 \theoremstyle{plain}
@@ -42,7 +43,7 @@ sartini sagliyorsa bu donusume \texttt{Zamfirescu donusumu} denir.
 
 \subsection*{Zayif Daraltan Donusum}
   Dugundji ve Granas [7], Banach Daralma Ilkesindeki $\alpha \in [0,1)$ sayisi $\alpha(x,y)$ fonksiyonuyla degistirildi. Yani $f:X \rightarrow X$ donusumu,
- $\alpha :XxX \rightarrow [0,1]$ fonksiyonu her $0<a\leq b$ icin 
+ $\alpha :X\times X \rightarrow [0,1]$ fonksiyonu her $0<a\leq b$ icin 
 \begin{equation*} 
   \sup\big\{\alpha(x,y) : 0\leq d(x,y) \leq b \big\} < 1
 \end{equation*}
@@ -56,7 +57,7 @@ Bu mantik kullanilarak [8] de Kannan donusumu, zayif Kannan donusumune genellest
 
 \subsection*{Zayif Zamfirescu Donusumleri}
  \definition  $(X,d)$ metrik uzay olsun. $f:X \rightarrow X$ donusumu,
- $\alpha :XxX \rightarrow [0,1]$ fonksiyonu her $0<a\leq b$ icin 
+ $\alpha :X\times X \rightarrow [0,1]$ fonksiyonu her $0<a\leq b$ icin 
 \begin{equation*} 
   \sup\big\{\alpha(x,y) : 0\leq d(x,y) \leq b \big\} < 1
 \end{equation*}
@@ -83,9 +84,17 @@ d(u,v)&=d(f(u),f(v))\\ &\leq \alpha(u,v)d(u,v)\\
 \end{align*}
 olup $d(u,v)$ leri sadelestirirsek $1<\theta(r/2,r)$ elde ederiz. Bu celiskidir. Demekki $u=v$ dir. \qed
 
+\newpage
+ Hatirlayalim ki $(X, d)$ metrik uzayinda tanimli $f: X\rightarrow X$ donusumu icin
+  \begin{equation*}
+    \lim_{n\rightarrow \infty}d(f^n(x_0),f^{n+1}(x_0))=0 
+  \end{equation*}
+oluyorsa $f$ donusumu $x_0\in X$ noktasinda asimptotik regulerdir denir.
 
-Devami gelecek hocam...
-\subsection*{Kaynaklar}
+\proposition $(X, d)$ bir metrik uzay ve $f : X\rightarrow X$ bir zayif Zamfiresu donusumu olsun. O zaman $f$ donusumu $X$ in her noktasinda asimptotik regulerdir.
+\kanit Her halukarda $d(x_n,x_{n+1})\leq \alpha(x_{n-1},x_n)d(x_{n-1},x_n)$ saglanir. Buradan $\{d(x_n,x_{n+1})\}$ dizisi artmayan(nonincreasing) dizidir. O halde bir $r\geq 0$ sayisina yakinsar. $r=0$ oldugunu gostermek yeterlidir, bunun icin $r>0$ oldugunu kabul edip celiski elde edelim.
+
+$\{d(x_n,x_{n+1})\}$ dizisi artmayan oldugu icin her $n\in \mathbb{N}$ icin $0<r\leq d(x_n,x_{n+1})\leq d(x_0,x_1)$ 'dir. Ve $\theta(r,d(x_0,x_1))$ icin
 
 
 \end{document}
