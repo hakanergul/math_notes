@@ -4,7 +4,6 @@
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{enumerate}
 \usetheme{Warsaw}
-\usecolortheme{seagull}
 
 \title{Zamfirescu D\"on\"u\c{s}\"um\"un\"un Bir Genelle\c{s}tirmesi}
 \author{Hakan ERG\"UL}
@@ -84,11 +83,6 @@
 \subsection{Bir Tan\i m ve Yard\i mc\i\ Bir Teorem}
 \begin{frame}
 \begin{itemize}[<+-| alert@+>]  
- 
-  \item[] \begin{definition}
-    $(X, d)$ bir metrik uzay ve $f:X\to X$ bir d\"{o}n\"{u}\c{s}\"{u}m olmak \"uzere bir $x_0 \in X$ noktas\i nda $\lim_{n\to \infty} d(f^n
-(x_0), f^{n+1} (x_0 )) = 0$ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"u $x_0$ noktas\i nda \texttt{asimptotik reg\"uler}dir denir
-  \end{definition}
 
  \item[] \c{S}imdi Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden daha genel olan a\c{s}a\u{g}\i daki lemmay\i\ verelim:
 
@@ -117,10 +111,58 @@
   \begin{theorem}
     $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve $$M(x,y):=\bigg\{ d(x,y), \frac{d(x,f(x))+d(y,f(y))}{2}, \frac{d(x,f(y))+d(y,f(x))}{2} \bigg\}$$ olmak \"{u}zere her $x,y \in X$ i\c{c}in $$\psi\big(d(f(x),f(y)\big)\geq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)$$ e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"un\"un bir tek sabit noktas\i\ vard\i r.\qed 
   \end{theorem}
-\end{frame}%ispatlanacak olanana teoremimiz
+\end{frame}%ispatlanacak olan teoremimiz
+
+
+\subsection{Bir Lemma}
+\begin{frame}
+\begin{itemize}[<+-| alert@+>]  
+  \item[] 
+  \begin{lemma}
+    Ana Teorem'de verilen \c{s}artlarla birlikte $\{M(x_n,x_{n+1})\}$ dizisi i\c{c}in $M(x_n,x_{n+1})\rightarrow 0$ d\i r.
+  \end{lemma}
+
+  \item[] 
+    \begin{proof}
+      \begin{align}
+        \begin{split}
+          M(x_n,x_{n+1})&=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,f(x_n))+d(x_{n+1},f(x_{n+1}))}{2},\\
+          &\hspace{80pt} \frac{d(x_n,f(x_{n+1}))+d(x_{n+1},f(x_{n}))}{2} \bigg\}\\
+          &=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2},\\
+          &\hspace{80pt} \frac{d(x_n,x_{n+2})+d(x_{n+1},x_{n+1})}{2} \bigg\}\\
+          &=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg\}
+        \end{split}
+      \end{align}
+    \end{proof}
+  \item[] elde ederiz. Burada iki durum s\"oz konusu olur:
+\end{itemize}
+\end{frame}%bir lemmamiz, asimptotik regulerlik aslinda
+
+\subsubsection{Durumlar} 
+\begin{frame}
+\begin{itemize} 
+  \item[] 
+  \begin{block}{$M(x_n,x_{n+1})=d(x_n,x_{n+1})$ olmas\i\ halinde :}
+     
+  \item[] 
+      \begin{align}
+          M(x_n,x_{n+1})&=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,f(x_n))+d(x_{n+1},f(x_{n+1}))}{2},\\
+          &\hspace{80pt} \frac{d(x_n,f(x_{n+1}))+d(x_{n+1},f(x_{n}))}{2} \bigg\}\\
+          &=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2},\\
+          &\hspace{80pt} \frac{d(x_n,x_{n+2})+d(x_{n+1},x_{n+1})}{2} \bigg\}\\
+          &=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg\}
+      \end{align}
+elde ederiz. Burada iki durum s\"oz konusu olur:
+   \end{block}
+\end{itemize}
+\end{frame}%Durum 1'i inceleyelim
+
+
 
 \end{document}
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
