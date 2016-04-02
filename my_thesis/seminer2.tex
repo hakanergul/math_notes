@@ -1,4 +1,4 @@
-\documentclass[sans,mathserif,8pt]{beamer}
+\documentclass[8pt]{beamer}
 \usepackage{pxfonts}  
 \usepackage{eulervm}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -41,9 +41,10 @@
        d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(y))+d(y,f(x))\big\}
 \tag*{\textsc{[c]}}
          \end{equation}
+\item[] \c{s}art\i n\i\ sa\u{g}l\i yorsa, $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i\ vard\i r.
+
    \end{itemize}
 
-\c{s}art\i n\i\ sa\u{g}l\i yorsa, $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i\ vard\i r.
     \qed
 \end{frame}%bazi ünlü sabit nokta teoremleri
 
@@ -75,10 +76,10 @@
 \item Rhoades[] 'deki \emph{Theorem 1}. \emph{(xiv)} ve \emph{(xxv)}' den   Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n, \textsc{[b]}, \textsc{[k]} ve \textsc{[c]}'den daha genel oldu\u{g}u g\"or\"ul\"ur.
 \end{itemize}
 
-
-
 \end{block}
 \end{frame}%Zamfirescu dönüşümü ve bir proposition
+
+
 
 \subsection{Bir Tan\i m ve Yard\i mc\i\ Bir Teorem}
 \begin{frame}
@@ -109,7 +110,15 @@
 \subsection{\.{I}spatlanacak Olan Teorem}
 \begin{frame}
   \begin{theorem}
-    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve $$M(x,y):=\bigg\{ d(x,y), \frac{d(x,f(x))+d(y,f(y))}{2}, \frac{d(x,f(y))+d(y,f(x))}{2} \bigg\}$$ olmak \"{u}zere her $x,y \in X$ i\c{c}in $$\psi\big(d(f(x),f(y)\big)\geq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)$$ e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"un\"un bir tek sabit noktas\i\ vard\i r.\qed 
+    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve
+    \begin{align}
+M(x,y):=\bigg\{ d(x,y), \frac{d(x,f(x))+d(y,f(y))}{2}, \frac{d(x,f(y))+d(y,f(x))}{2} \bigg\}
+    \end{align}
+olmak \"{u}zere her $x,y \in X$ i\c{c}in
+\begin{align}
+\psi\big(d(f(x),f(y)\big)\leq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)
+\end{align}
+e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"un\"un bir tek sabit noktas\i\ vard\i r.\qed 
   \end{theorem}
 \end{frame}%ispatlanacak olan teoremimiz
 
@@ -117,6 +126,7 @@
 \subsection{Bir Lemma}
 \begin{frame}
 \begin{itemize}[<+-| alert@+>]  
+
   \item[] 
   \begin{lemma}
     Ana Teorem'de verilen \c{s}artlarla birlikte $\{M(x_n,x_{n+1})\}$ dizisi i\c{c}in $M(x_n,x_{n+1})\rightarrow 0$ d\i r.
@@ -124,8 +134,7 @@
 
   \item[] 
     \begin{proof}
-      \begin{align}
-        \begin{split}
+      \begin{align*}
           M(x_n,x_{n+1})&=\max\bigg\{
           d(x_n,x_{n+1}),\frac{d(x_n,f(x_n))+d(x_{n+1},f(x_{n+1}))}{2},\\
           &\hspace{80pt} \frac{d(x_n,f(x_{n+1}))+d(x_{n+1},f(x_{n}))}{2} \bigg\}\\
@@ -134,35 +143,163 @@
           &\hspace{80pt} \frac{d(x_n,x_{n+2})+d(x_{n+1},x_{n+1})}{2} \bigg\}\\
           &=\max\bigg\{
           d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg\}
-        \end{split}
-      \end{align}
+      \end{align*}
     \end{proof}
+
   \item[] elde ederiz. Burada iki durum s\"oz konusu olur:
 \end{itemize}
 \end{frame}%bir lemmamiz, asimptotik regulerlik aslinda
 
-\subsubsection{Durumlar} 
+\subsubsection{Durum 1}
 \begin{frame}
-\begin{itemize} 
-  \item[] 
-  \begin{block}{$M(x_n,x_{n+1})=d(x_n,x_{n+1})$ olmas\i\ halinde :}
-     
-  \item[] 
-      \begin{align}
-          M(x_n,x_{n+1})&=\max\bigg\{
-          d(x_n,x_{n+1}),\frac{d(x_n,f(x_n))+d(x_{n+1},f(x_{n+1}))}{2},\\
-          &\hspace{80pt} \frac{d(x_n,f(x_{n+1}))+d(x_{n+1},f(x_{n}))}{2} \bigg\}\\
-          &=\max\bigg\{
-          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2},\\
-          &\hspace{80pt} \frac{d(x_n,x_{n+2})+d(x_{n+1},x_{n+1})}{2} \bigg\}\\
-          &=\max\bigg\{
-          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg\}
-      \end{align}
-elde ederiz. Burada iki durum s\"oz konusu olur:
+  \begin{block}{Durum 1. $M(x_n,x_{n+1})=d(x_n,x_{n+1})$ olmas\i\ halinde :}
+      \begin{align*}
+          \psi\big(d(x_{n+1},x_{n+2})\big)&=\psi \big(d(f(x_{n}),f(x_{n+1}))\big)\\
+          &\leq \psi\big(d(x_{n},x_{n+1})\big)- \phi\big(d(x_{n},x_{n+1})\big)\\
+          &\leq \psi\big(d(x_{n},x_{n+1})\big)
+      \end{align*}
+olup $\psi$ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ d\i r. Yani $\{d(x_n,x_{n+1})\}$ dizisi azaland\i r.
    \end{block}
-\end{itemize}
 \end{frame}%Durum 1'i inceleyelim
 
+
+\subsubsection{Durum 2} 
+\begin{frame} 
+  \begin{block}{Durum 2.  $M(x_n,x_{n+1})=\frac{1}{2}\big(d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})\big)$ olmas\i\ hali :}
+O halde 
+      \begin{align}
+        d(x_n,x_{n+1})&\leq \frac{1}{2}\big(d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})\big)\\
+                    &\leq d(x_{n+1},x_{n+2}) 
+      \end{align}
+olur. Ayr\i ca 
+      \begin{align}
+          \psi\big(d(x_{n+1},x_{n+2})\big) &=\psi \big(d(f(x_{n}),f(x_{n+1}))\big) \\
+          &\leq \psi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
+          & \hspace{10pt}- \phi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
+          &\leq \psi\big(d(x_{n},x_{n+1})\big)
+      \end{align}
+olup $\psi $ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ d\i r. Bu ise (2) e\c{s}itsizli\u{g}i ile \c{c}eli\c{s}ir.
+   \end{block}
+\end{frame}%Durum 2'i inceleyelim
+
+
+\subsubsection{ \.{I}spat\i n Sonucu :} 
+\begin{frame} 
+  \begin{block}{Lemman\i n Sonucu:}
+Sonu\c{c} olarak  $M(x_{n},x_{n+1})= d(x_n,x_{n+1})$ d\i r. O halde $\{d(x_n,x_{n+1})\}$ dizisi monoton azalan(artmayan) bir dizidir ve bir $r\geq 0$ say\i s\i na yak\i nsar. Bu bilgiyi kullan\i rsak $$\psi\big(d(x_{n+1},x_{n+2})\big)\leq \psi\big(d(x_{n},x_{n+1})\big)-\phi\big(d(x_{n},x_{n+1})\big)$$ olup $n\to \infty$ iken limitini al\i rsak $$\psi(r)\leq \psi(r)-\phi(r)$$ elde ederiz ki bu $r=0$ olmas\i n\i\ gerektirir. Sonu\c{c} olarak $\{d(x_n,x_{n+1})\}\to 0$. \qed
+   \end{block}
+\end{frame}%lemmanın sonucu
+
+
+
+\subsection{Ana Teoremin \.{I}spat\i }
+\begin{frame}
+  \begin{block}{Ana Teoremin \.{I}spat\i }
+    \"{O}ncelikle $\{x_n\}$ dizisinin Cauchy dizisi oldu\u{g}unu g\"osterelim. Varsayal\i m ki $\{x_n\}$ bir Cauchy dizisi olmas\i n. O halde $\{x_n\}$ dizisinin \"oyle iki $\{x_{n(k)}\}$ ve $\{x_{m(k)}\}$ altdizisi vard\i r ki $\varepsilon_0 > 0$ olmak \"uzere $m(k)>n(k)\geq k$ olacak \c{s}ekildeki her $k\in \mathbb{N}$ i\c{c}in $$d(x_{m(k)},x_{n(k)})\geq \varepsilon_0$$ d\i r. Dahas\i\ yukar\i daki \c{s}artlar\i\ sa\u{g}layan $m(k)$ say\i s\i n\i\ $n(k)$ dan b\"uy\"uk en k\"u\c{c}\"uk say\i\ olarak se\c{c}ersek $$d(x_{m(k)-1},x_{n(k)})<\varepsilon_0$$ elde ederiz. Buradan
+    \begin{align}
+      \varepsilon_0 &\leq d(x_{m(k)},x_{n(k)})\\
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)})\\
+      & <d(x_{m(k)},x_{m(k)-1})+\varepsilon_0
+    \end{align}
+olup $k\to \infty$ iken
+    \begin{equation}
+      d(x_{m(k)},x_{n(k)})\to \varepsilon_0
+    \end{equation}
+olur.
+\end{block}
+\end{frame}
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Yine
+    \begin{align}
+      d(x_{m(k)},x_{n(k)})&\leq  d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})\\ 
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)})+d(x_{n(k)},x_{n(k)-1})\\
+      &\hspace{100pt} +d(x_{n(k)-1},x_{n(k)})
+    \end{align}
+e\c{s}itsizli\u{g}inde $k\to \infty$ iken limit al\i rsak 
+     \begin{equation}
+        d(x_{m(k)-1},x_{n(k)-1})\to \varepsilon_0
+     \end{equation}
+elde ederiz.
+
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Benzer olarak
+    \begin{align}
+      d(x_{m(k)},x_{n(k)})&\leq  d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)})\\ 
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})
+    \end{align}
+e\c{s}itsizli\u{g}inde $k\to \infty$ iken limit al\i rsak 
+     \begin{equation}
+        d(x_{m(k)-1},x_{n(k)})\to \varepsilon_0
+     \end{equation}
+buluruz.
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Ayr\i ca
+    \begin{align}
+      d(x_{m(k)},x_{n(k)})&\leq  d(x_{m(k)},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})\\ 
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})
+    \end{align}
+e\c{s}itsizli\u{g}inde $k\to \infty$ iken limit al\i rsak 
+     \begin{equation}
+        d(x_{m(k)},x_{n(k)-1})\to \varepsilon_0
+     \end{equation}
+elde ederiz.
+
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Sonu\c{c} olarak 
+Di\u{g}er yandan
+    \begin{align}
+      \psi(\varepsilon_0)&\leq \psi\big(d(x_{m(k)},x_{n(k)})\big)\\ 
+      &= \psi\big(d(fx_{m(k)-1},fx_{n(k)-1})\big)\\
+      &\leq \psi\big(M(x_{m(k)-1},x_{n(k)-1})\big)-\phi\big(M(x_{m(k)-1},x_{n(k)-1})\big)    \end{align}
+d\i r. Burada (12), (16), (19) ve (22) deki bilgileri kullan\i rsak
+     \begin{align}
+        \lim_{k\to \infty}M(x_{m(k)-1},x_{n(k)-1})&=\lim_{k\to \infty}\max\bigg\{ d(x_{m(k)-1},x_{n(k)-1}),\\
+       &\hspace{10pt}\frac{1}{2}[d(x_{m(k)-1},x_{m(k)})+d(x_{n(k)-1},x_{n(k)})],\\
+       &\hspace{10pt}\frac{1}{2}[d(x_{m(k)-1},x_{n(k)})+d(x_{m(k)},x_{n(k)-1})] \bigg\}\\
+       &=\max\{\varepsilon_0, 0, \varepsilon_0\}\\
+       &=\varepsilon_0
+     \end{align}
+elde ederiz. 
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Bunu (25)'te yerine yazarsak
+    \begin{align}
+      \psi(\varepsilon_0)\leq\psi(\varepsilon_0)-\phi(\varepsilon_0)
+    \end{align}
+olup  $\phi(\varepsilon_0)\leq 0$ olur ki bu da $\varepsilon_0=0$ olmas\i n\i\ gerektirir. Bu ise ba\c{s}taki kabul\"um\"uzle \c{c}eli\c{s}ir. Demekki kabul\"um\"uz yanl\i \c{s}t\i r. Yani $\{x_n\}$ bir Cauchy dizisidir. $(X,d)$ tam metrik uzay oldu\u{g}u i\c{c}in $\{x_n\}$ bu uzayda bir $x^*$ noktas\i na yak\i nsar. 
+Buradan hareketle
+    \begin{align}
+      \lim_{n\to \infty}M(x_n, x^*)&=\lim_{n\to \infty}\max\bigg\{ d(x_n,x^*),\frac{1}{2}[ d(x_n,x_{n+1})+ d(x^*,fx^*)],\\
+      &\hspace{90pt}\frac{1}{2}[ d(x_n,fx^*)+ d(x^*,x_{n+1})]\bigg\}\\
+      & =\frac{d(x^*,fx^*)}{2}
+    \end{align}
+elde ederiz. Bu bilgiyi (2) de yerine yazarsak $n\to \infty$
+\begin{align}
+  \psi(d(x^*,fx^*))\leq \psi\big(\frac{d(x^*,fx^*)}{2}\big)-\phi\big(\frac{d(x^*,fx^*)}{2}\big) 
+\end{align}
+\end{block}
+\end{frame}%ana teoremin ispatı
 
 
 \end{document}
