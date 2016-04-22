@@ -5,6 +5,9 @@
 \usepackage{enumerate}
 \usetheme{Warsaw}
 
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+
 \title{Zamfirescu D\"on\"u\c{s}\"um\"un\"un Bir Genelle\c{s}tirmesi}
 \author{Hakan ERG\"UL}
 \institute{Atat\"{u}rk \"{U}niversitesi}
@@ -17,29 +20,34 @@
 \begin{frame}
 \titlepage
 \end{frame}
+\begin{frame}
+  \frametitle{\.{I}\c{c}indekiler}
+  \tableofcontents
+\end{frame}
+
 
 \section{Giri\c{s}}
-\subsection{Baz\i \ \"{u}nl\"{u} Sabit Nokta Teoremleri}
+\subsection{Baz\i \ Bilinen Sabit Nokta Teoremleri}
 
 \begin{frame}
-\frametitle{Baz\i \ \"{u}nl\"{u} Sabit Nokta Teoremleri}
+\frametitle{Baz\i \ Bilinen Sabit Nokta Teoremleri}
    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ olmak \"{u}zere 
    \begin{itemize}[<+-| alert@+>]
 
-   \item (Banach Daralma \.{I}lkesi[1])
+   \item (Banach Daralma \.{I}lkesi\cite{Banach1922})
      \begin{equation} 
        d(f(x), f(y))\leq \alpha d(x,y)
-\tag*{\textsc{[b]}}
+\tag*{\textsc{(b)}}
         \end{equation}
-   \item (Kannan D\"{o}n\"{u}\c{s}\"{u}m\"{u}[2])
+   \item (Kannan D\"{o}n\"{u}\c{s}\"{u}m\"{u}\cite{Kannan1969})
      \begin{equation} 
        d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(x))+d(y,f(y))\big\}
-\tag*{\textsc{[k]}}
+\tag*{\textsc{(k)}}
          \end{equation}
-   \item (Chatterjea D\"{o}n\"{u}\c{s}\"{u}m\"{u}[3])
+   \item (Chatterjea D\"{o}n\"{u}\c{s}\"{u}m\"{u}\cite{Chatterjea1972})
      \begin{equation} 
        d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(y))+d(y,f(x))\big\}
-\tag*{\textsc{[c]}}
+\tag*{\textsc{(c)}}
          \end{equation}
 \item[] \c{s}art\i n\i\ sa\u{g}l\i yorsa, $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i\ vard\i r.
 
@@ -48,13 +56,11 @@
     \qed
 \end{frame}%bazi ünlü sabit nokta teoremleri
 
-
 \subsection{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
 \begin{frame}
 \frametitle{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
- $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ ve $\beta , \gamma \in [0,\frac{1}{2}) $ olmak \"{u}zere her $x,y \in X$ i\c{c}in a\c{s}a\u{g}\i dakilerden en az biri do\u{g}rudur:
-
-    \begin{itemize}
+ $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ ve $\beta , \gamma \in [0,\frac{1}{2}) $ olmak \"{u}zere her $x,y \in X$ i\c{c}in 
+    \begin{enumerate}
     \item $\begin{aligned} d(f(x), f(y))\leq \alpha d(x,y)
       \end{aligned}$
     \item
@@ -66,22 +72,18 @@
       $\begin{aligned} d(f(x), f(y))\leq \gamma \big\{
         d(x,f(y))+d(y,f(x))\big\}
       \end{aligned}$
-
-    \item  
-\end{itemize}
-
+\end{enumerate}
+\c{s}artlar\i ndan en az biri do\u{g}ru ise $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i \ vard\i r.
 \begin{block}{Not}  
 \begin{itemize}[<+-| alert@+>]  
-\item Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} tam metrik uzayda bir tek sabit noktaya yak\i nsar.  
-\item Rhoades[] 'deki \emph{Theorem 1}. \emph{(xiv)} ve \emph{(xxv)}' den   Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n, \textsc{[b]}, \textsc{[k]} ve \textsc{[c]}'den daha genel oldu\u{g}u g\"or\"ul\"ur.
+\item Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} \cite{Zamfirescu1974} tam metrik uzayda bir tek sabit noktaya yak\i nsar.  
+\item Rhoades \cite{Rhoades1977} 'de \emph{Theorem 1}. \emph{(xiv)} ve \emph{(xxv)}' den   Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n, \textsc{(b)}, \textsc{(k)} ve \textsc{(c)}'den daha genel oldu\u{g}u g\"ostermi\c{s}tir.
 \end{itemize}
 
 \end{block}
 \end{frame}%Zamfirescu dönüşümü ve bir proposition
 
-
-
-\subsection{Bir Tan\i m ve Yard\i mc\i\ Bir Teorem}
+\subsection{Yard\i mc\i\ Bir Teorem}
 \begin{frame}
 \begin{itemize}[<+-| alert@+>]  
 
@@ -96,21 +98,18 @@
   \c{s}art\i n\i\ sa\u{g}l\i yorsa bu d\"{o}n\"{u}\c{s}\"{u}m bir tek sabit noktas\i\ vard\i r.\qed
 \end{lemma}
 
-  \item[] \begin{block}{Not}
-  \begin{enumerate}
-  \item Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden tam metrik uzayda bir tek sabit noktaya yak\i nsar.
-  \item Rhoades[] 'deki \emph{Theorem 1}. \emph{(xxv)}' de  g\"or\"uld\"u\u{g}\"u gibi yukar\i daki lemma,  Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden daha geneldir.  \item Dolay\i s\i yla lemmada verilen \c{s}artlar\i\ sa\u{g}layan d\"{o}n\"{u}\c{s}\"{u}m, \textsc{[b]}, \textsc{[k]} ve \textsc{[c]}'den daha geneldir.
-\end{enumerate}
-\end{block}
+  \item[] \begin{proof}Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n tan\i m\i n\i n direk sonucudur. Yukar\i daki e\c{s}itsizli\u{g}in sa\u{g} taraf\i ,tan\i mdaki 3 \c{s}arttan herhangi biri i\c{c}in daha b\"uy\"ukt\"ur. 
+ \end{proof}
 \end{itemize}
 
 \end{frame}%yardimci teorem (zamfirescu dönüşümünün genel bir hali), ana teoremde kullanılacak
 
-\section{Ana Sonuclar}
-\subsection{\.{I}spatlanacak Olan Teorem}
+
+\section{Ana Sonu\c{c}lar}
+\subsection{$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}}
 \begin{frame}
-  \begin{theorem}
-    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve
+  \begin{definition}[$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}]
+    $(X,d)$  bir metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve
     \begin{align}
 M(x,y):=\bigg\{ d(x,y), \frac{d(x,f(x))+d(y,f(y))}{2}, \frac{d(x,f(y))+d(y,f(x))}{2} \bigg\}
     \end{align}
@@ -118,18 +117,17 @@ olmak \"{u}zere her $x,y \in X$ i\c{c}in
 \begin{align}
 \psi\big(d(f(x),f(y)\big)\leq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)
 \end{align}
-e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"un\"un bir tek sabit noktas\i\ vard\i r.\qed 
-  \end{theorem}
-\end{frame}%ispatlanacak olan teoremimiz
-
+e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} denir.\qed 
+  \end{definition}
+\end{frame}%$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} tanimi
 
 \subsection{Bir Lemma}
 \begin{frame}
 \begin{itemize}[<+-| alert@+>]  
 
   \item[] 
-  \begin{lemma}
-    Ana Teorem'de verilen \c{s}artlarla birlikte $\{M(x_n,x_{n+1})\}$ dizisi i\c{c}in $M(x_n,x_{n+1})\rightarrow 0$ d\i r.
+  \begin{lemma}[Asimptotik Reg\"ulerlik]
+   $f$ bir $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} olmak \"{u}zere $d(x_n,x_{n+1})\rightarrow 0$ d\i r.
   \end{lemma}
 
   \item[] 
@@ -178,7 +176,7 @@ olur. Ayr\i ca
           & \hspace{10pt}- \phi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
           &\leq \psi\big(d(x_{n},x_{n+1})\big)
       \end{align}
-olup $\psi $ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ d\i r. Bu ise (2) e\c{s}itsizli\u{g}i ile \c{c}eli\c{s}ir.
+olup $\psi $ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ d\i r. Bu ise (4) e\c{s}itsizli\u{g}i ile \c{c}eli\c{s}ir.
    \end{block}
 \end{frame}%Durum 2'i inceleyelim
 
@@ -189,6 +187,18 @@ olup $\psi $ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ 
 Sonu\c{c} olarak  $M(x_{n},x_{n+1})= d(x_n,x_{n+1})$ d\i r. O halde $\{d(x_n,x_{n+1})\}$ dizisi monoton azalan(artmayan) bir dizidir ve bir $r\geq 0$ say\i s\i na yak\i nsar. Bu bilgiyi kullan\i rsak $$\psi\big(d(x_{n+1},x_{n+2})\big)\leq \psi\big(d(x_{n},x_{n+1})\big)-\phi\big(d(x_{n},x_{n+1})\big)$$ olup $n\to \infty$ iken limitini al\i rsak $$\psi(r)\leq \psi(r)-\phi(r)$$ elde ederiz ki bu $r=0$ olmas\i n\i\ gerektirir. Sonu\c{c} olarak $\{d(x_n,x_{n+1})\}\to 0$. \qed
    \end{block}
 \end{frame}%lemmanın sonucu
+
+
+
+
+
+\subsection{Ana Teorem}
+\begin{frame}
+  \begin{theorem}[$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}]
+    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} ise bu uzayda bir tek sabit noktas\i \ vard\i r.
+  \end{theorem}
+\end{frame}%ispatlanacak olan teoremimiz
+
 
 
 
@@ -319,10 +329,20 @@ olup $\phi(d(x',x^*))\leq 0$ elde edilir ki $d(x',x^*)=0$ olmas\i n\i\ gerektiri
   \end{block}
 \end{frame} %ana teoremin ispatini bitiriyoruuuum
 
-\section{Sonu\c{c}}
+\section{Kaynak\c{c}a}
 \begin{frame}
-  \begin{block}{Sonu\c{c}}
-     Sonu\c{c} k\i sm\i\ buraya
-  \end{block}
+\frametitle{Kaynaklar}
+\bibliographystyle{ieeetr}
+\bibliography{seminer2}
+\nocite{*}
+
+
+
 \end{frame}
+
+
 \end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
