@@ -3,17 +3,24 @@
 \usepackage{eulervm}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{enumerate}
-\usetheme{Warsaw}
-
+\usetheme{Antibes}
+\usecolortheme{beaver}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
 
-\title{Zamfirescu D\"on\"u\c{s}\"um\"un\"un Bir Genelle\c{s}tirmesi}
+\uselanguage{turkish}
+\languagepath{turkish}
+\deftranslation[to=turkish]{Theorem}{Teorem}
+\deftranslation[to=turkish]{Definition}{Tan\i m}
+
+
+
+\title{($\psi,\phi$)-zay\i f Zamfirescu D\"on\"u\c{s}\"um\"u}
 \author{Hakan ERG\"UL}
 \institute{Atat\"{u}rk \"{U}niversitesi}
 \date{\today}
 
-{\setlength{\abovedisplayskip}{0pt}%
+{\setlength{\abovedisplayskip}{0pt}
 
 \begin{document}
 
@@ -27,8 +34,40 @@
 
 
 \section{Giri\c{s}}
-\subsection{Baz\i \ Bilinen Sabit Nokta Teoremleri}
+\begin{frame}
+  \frametitle{\"Ozet}
+  \textrm{Dutta ve Choudhury \cite{Dutta2008}, Banach sabit nokta teoreminden daha genel olan sabit nokta teoremini ortaya att\i . K\i r ve K\i z\i ltun\c{c} \cite{Kir2013} ayn\i \ mant\i \u{g}\i \ Kannan\cite{Kannan1969} ve Chatterjea\cite{Chatterjea1972} sabit nokta teoremlerine uygulayarak daha genel bir sonu\c{c} elde etti. Bu \c{c}al\i \c{s}mada ayn\i \ mant\i \u{g}\i \ Zamfirescu\cite{Zamfirescu1972}' den daha genel bir teoreme uygulamaya \c{c}al\i \c{s}t\i k.}
+\end{frame}
 
+
+\subsection{Mesafe De\u{g}i\c{s}tiren Fonksiyon}
+\begin{frame}
+\frametitle{Mesafe De\u{g}i\c{s}tiren Fonksiyon}
+  \begin{definition}[\cite{Khan1984}]
+     A\c{s}a\u{g}\i daki \c{s}artlar\i \ sa\u{g}layan $\psi:[0,\infty)\to[0,\infty)$ fonksiyonuna mesafe de\u{g}i\c{s}tiren fonksiyon denir:
+     \begin{enumerate}
+      \item $\psi$ fonksiyonu s\"urekli ve azalmayan(monoton artan)d\i r.
+      \item $\psi(t)=0\Leftrightarrow t=0$
+     \end{enumerate}
+G\"or\"uld\"u\u{g}\"u gibi her mesafe de\u{g}i\c{s}tiren fonksiyon bir metriktir fakat tersi her zaman do\u{g}ru de\u{g}ildir. Tersine\"ornek olarak $\psi(t)=t^2$ fonksiyonu verilebilir.
+\cite{Browder1966}
+  \end{definition}
+\end{frame}
+
+\subsection{Asimptotik Regulerlik}
+\begin{frame}
+  \begin{definition}
+     $(X,d)$ metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m olmak \"uzere
+     \begin{equation*}
+       \lim_{n\to \infty}d(f^n(x_0),f^{n+1}(x_{0}))=0 
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimptotik reguler}dir denir.
+\cite{Browder1966}
+  \end{definition}
+\end{frame}
+
+
+\subsection{Baz\i \ Bilinen Sabit Nokta Teoremleri}
 \begin{frame}
 \frametitle{Baz\i \ Bilinen Sabit Nokta Teoremleri}
    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ olmak \"{u}zere 
@@ -83,6 +122,38 @@
 \end{block}
 \end{frame}%Zamfirescu dönüşümü ve bir proposition
 
+\subsection{Zay\i f Daraltan D\"{o}n\"{u}\c{s}\"{u}m}
+\begin{frame}
+  \begin{definition}[\cite{Rhoades2001}]
+     $(X,d)$ metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyon olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       d(f(x),f(y))\leq d(x,y)-\phi(d(x,y))
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}ne zay\i f daraltan d\"{o}n\"{u}\c{s}\"{u}m denir.
+  \end{definition}
+  \begin{block}{Not}
+    Rhoades\cite{Rhoades2001}, tam metrik uzayda zay\i f daraltan
+    d\"{o}n\"{u}\c{s}\"{u}m\"un bir tek sabit noktas\i \ oldu\u{g}unu
+    ve bu d\"{o}n\"{u}\c{s}\"{u}m\"un \textsc{(b)}'den daha genel
+    oldu\u{g}unu g\"ostermi\c{s}tir. Ger\c{c}ekten de $k\in(0,1)$
+    olmak \"uzere $\phi(t)=kt$ al\i nd\i \u{g}\i nda \textsc{[b]} elde
+    edilir.
+  \end{block}
+
+\end{frame}
+
+\subsection{($\psi-\phi$)-zay\i f Daraltan D\"{o}n\"{u}\c{s}\"{u}m}
+\begin{frame}
+Dutta ve Choudhury\cite{Dutta2008}, Rhoades\cite{Rhoades2001}'in vermi\c{s} oldu\u{g}u zay\i f daraltan d\"{o}n\"{u}\c{s}\"{u}mden daha genel olan a\c{s}a\u{g}\i daki teoremi kan\i tlam\i \c{s}t\i r.
+  \begin{definition}[\cite{Dutta2008}]
+     $(X,d)$ metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       \psi(d(f(x),f(y)))\leq \psi(d(x,y))-\phi(d(x,y))
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
+  \end{definition}
+\end{frame}
+
 \subsection{Yard\i mc\i\ Bir Teorem}
 \begin{frame}
 \begin{itemize}[<+-| alert@+>]  
@@ -117,7 +188,7 @@ olmak \"{u}zere her $x,y \in X$ i\c{c}in
 \begin{align}
 \psi\big(d(f(x),f(y)\big)\leq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)
 \end{align}
-e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} denir.\qed 
+e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une\texttt{ $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}} denir.\qed 
   \end{definition}
 \end{frame}%$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} tanimi
 
@@ -126,7 +197,7 @@ e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une $(\psi,\phi)
 \begin{itemize}[<+-| alert@+>]  
 
   \item[] 
-  \begin{lemma}[Asimptotik Reg\"ulerlik]
+  \begin{lemma}[Asimptotik Regulerlik]
    $f$ bir $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} olmak \"{u}zere $d(x_n,x_{n+1})\rightarrow 0$ d\i r.
   \end{lemma}
 
@@ -330,19 +401,12 @@ olup $\phi(d(x',x^*))\leq 0$ elde edilir ki $d(x',x^*)=0$ olmas\i n\i\ gerektiri
 \end{frame} %ana teoremin ispatini bitiriyoruuuum
 
 \section{Kaynak\c{c}a}
-\begin{frame}
-\frametitle{Kaynaklar}
-\bibliographystyle{ieeetr}
+\textbf{KAYNAK\c{C}A}
+\bibliographystyle{acm}
 \bibliography{seminer2}
 \nocite{*}
 
 
 
-\end{frame}
-
 
 \end{document}
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
