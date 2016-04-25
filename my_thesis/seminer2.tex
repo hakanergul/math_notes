@@ -59,7 +59,7 @@ G\"or\"uld\"u\u{g}\"u gibi her mesafe de\u{g}i\c{s}tiren fonksiyon bir metriktir
   \begin{definition}
      $(X,d)$ metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m olmak \"uzere
      \begin{equation*}
-       \lim_{n\to \infty}d(f^n(x_0),f^{n+1}(x_{0}))=0 
+       \lim_{n\to \infty}d(f^nx_0,f^{n+1}x_{0})=0 
      \end{equation*}
 oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimptotik reguler}dir denir.
 \cite{Browder1966}
@@ -75,17 +75,17 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimpt
 
    \item (Banach Daralma \.{I}lkesi\cite{Banach1922})
      \begin{equation} 
-       d(f(x), f(y))\leq \alpha d(x,y)
+       d(fx, fy)\leq \alpha d(x,y)
 \tag*{\textsc{(b)}}
         \end{equation}
    \item (Kannan D\"{o}n\"{u}\c{s}\"{u}m\"{u}\cite{Kannan1969})
      \begin{equation} 
-       d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(x))+d(y,f(y))\big\}
+       d(fx, fy)\leq \frac{\alpha}{2}\big\{ d(x,fx)+d(y,fy)\big\}
 \tag*{\textsc{(k)}}
          \end{equation}
    \item (Chatterjea D\"{o}n\"{u}\c{s}\"{u}m\"{u}\cite{Chatterjea1972})
      \begin{equation} 
-       d(f(x), f(y))\leq \frac{\alpha}{2}\big\{ d(x,f(y))+d(y,f(x))\big\}
+       d(fx, fy)\leq \frac{\alpha}{2}\big\{ d(x,fy)+d(y,fx)\big\}
 \tag*{\textsc{(c)}}
          \end{equation}
 \item[] \c{s}art\i n\i\ sa\u{g}l\i yorsa, $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i\ vard\i r.
@@ -100,16 +100,16 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimpt
 \frametitle{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
  $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ ve $\beta , \gamma \in [0,\frac{1}{2}) $ olmak \"{u}zere her $x,y \in X$ i\c{c}in 
     \begin{enumerate}
-    \item $\begin{aligned} d(f(x), f(y))\leq \alpha d(x,y)
+    \item $\begin{aligned} d(fx, fy)\leq \alpha d(x,y)
       \end{aligned}$
     \item
-      $\begin{aligned} d(f(x), f(y))\leq \beta \big\{
-        d(x,f(x))+d(y,f(y))\big\}
+      $\begin{aligned} d(fx, fy)\leq \beta \big\{
+        d(x,fx)+d(y,fy)\big\}
       \end{aligned}$
 
     \item
-      $\begin{aligned} d(f(x), f(y))\leq \gamma \big\{
-        d(x,f(y))+d(y,f(x))\big\}
+      $\begin{aligned} d(fx, fy)\leq \gamma \big\{
+        d(x,fy)+d(y,fx)\big\}
       \end{aligned}$
 \end{enumerate}
 \c{s}artlar\i ndan en az biri do\u{g}ru ise $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i \ vard\i r.
@@ -127,7 +127,7 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimpt
   \begin{definition}[\cite{Rhoades2001}]
      $(X,d)$ metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyon olmak \"uzere her $x, y\in X$ i\c{c}in
      \begin{equation*}
-       d(f(x),f(y))\leq d(x,y)-\phi(d(x,y))
+       d(fx,fy)\leq d(x,y)-\phi(d(x,y))
      \end{equation*}
 oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}ne zay\i f daraltan d\"{o}n\"{u}\c{s}\"{u}m denir.
   \end{definition}
@@ -145,14 +145,36 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}ne zay\i f daraltan d\"{o}n\"{u}\c{s}\"
 \subsection{($\psi-\phi$)-zay\i f Daraltan D\"{o}n\"{u}\c{s}\"{u}m}
 \begin{frame}
 Dutta ve Choudhury\cite{Dutta2008}, Rhoades\cite{Rhoades2001}'in vermi\c{s} oldu\u{g}u zay\i f daraltan d\"{o}n\"{u}\c{s}\"{u}mden daha genel olan a\c{s}a\u{g}\i daki teoremi kan\i tlam\i \c{s}t\i r.
-  \begin{definition}[\cite{Dutta2008}]
+  \begin{theorem}[\cite{Dutta2008}]
      $(X,d)$ metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
      \begin{equation*}
-       \psi(d(f(x),f(y)))\leq \psi(d(x,y))-\phi(d(x,y))
+       \psi(d(fx,fy))\leq \psi(d(x,y))-\phi(d(x,y))
      \end{equation*}
 oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
-  \end{definition}
+  \end{theorem}
 \end{frame}
+
+
+\subsection{($\psi-\phi$)-zay\i f Kannan ve Chatterjea D\"{o}n\"{u}\c{s}\"{u}mleri}
+\begin{frame}
+Dutta ve Choudhury\cite{Dutta2008}'nin mant\i \u{g}\i n\i \ kullanarak K\i r ve K\i z\i ltun\c{c}\cite{Kir2013}, s\i ras\i yla Kannan ve Chatterjea sabit nokta teoremlerinden daha genel olan ($\psi-\phi$)-zay\i f Kannan ve ($\psi-\phi$)-zay\i f Chatterjea teoremlerini ortaya atm\i \c{s}t\i r.
+  \begin{theorem}[($\psi-\phi$)-zay\i f Kannan\cite{Kir2013}]
+     $(X,d)$ tam metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       \psi(d(fx,fy))\leq \psi\bigg(\frac{d(x,fx)+d(y,fy)}{2}\bigg)-\phi\bigg(\frac{d(x,fx)+d(y,fy)}{2}\bigg)
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
+  \end{theorem}
+  \begin{theorem}[($\psi-\phi$)-zay\i f Chatterjea\cite{Kir2013}]
+     $(X,d)$ tam metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       \psi(d(fx,fy))\leq \psi\bigg(\frac{d(x,fy)+d(y,fx)}{2}\bigg)-\phi\bigg(\frac{d(x,fy)+d(y,fx)}{2}\bigg)
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
+  \end{theorem}
+\end{frame}
+
+
 
 \subsection{Yard\i mc\i\ Bir Teorem}
 \begin{frame}
@@ -177,7 +199,7 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahipt
 
 
 \section{Ana Sonu\c{c}lar}
-\subsection{$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}}
+\subsection{($\psi,\phi$)-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}}
 \begin{frame}
   \begin{definition}[$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}]
     $(X,d)$  bir metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve
@@ -258,8 +280,6 @@ olup $\psi $ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ 
 Sonu\c{c} olarak  $M(x_{n},x_{n+1})= d(x_n,x_{n+1})$ d\i r. O halde $\{d(x_n,x_{n+1})\}$ dizisi monoton azalan(artmayan) bir dizidir ve bir $r\geq 0$ say\i s\i na yak\i nsar. Bu bilgiyi kullan\i rsak $$\psi\big(d(x_{n+1},x_{n+2})\big)\leq \psi\big(d(x_{n},x_{n+1})\big)-\phi\big(d(x_{n},x_{n+1})\big)$$ olup $n\to \infty$ iken limitini al\i rsak $$\psi(r)\leq \psi(r)-\phi(r)$$ elde ederiz ki bu $r=0$ olmas\i n\i\ gerektirir. Sonu\c{c} olarak $\{d(x_n,x_{n+1})\}\to 0$. \qed
    \end{block}
 \end{frame}%lemmanın sonucu
-
-
 
 
 
