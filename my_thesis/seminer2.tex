@@ -122,6 +122,27 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimpt
 \end{block}
 \end{frame}%Zamfirescu dönüşümü ve bir proposition
 
+
+\subsection{Zamfirescu'ya Denk Bir Teorem}
+\begin{frame}
+\begin{itemize}[<+-| alert@+>]  
+
+ \item[] Rhoades\cite{Rhoades1977}'de \textit{sayfa 266}'da Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}ne denk olan a\c{s}a\u{g}\i daki teoremi vermi\c{s}tir:
+
+ \item[] \begin{lemma}
+  $(X,d)$ tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m,
+  $\alpha \in [0,1)$ olmak \"uzere
+  \begin{equation*}
+    d(fx, fy)\leq \alpha\max\bigg\{ d(x,y), \frac{1}{2}[d(x,fx)+d(y,fy)], \frac{1}{2}[d(y,fx)+d(y,fx)] \bigg\} 
+  \end{equation*}
+  \c{s}art\i n\i\ sa\u{g}l\i yorsa bu d\"{o}n\"{u}\c{s}\"{u}m bir tek sabit noktas\i\ vard\i r.\qed
+\end{lemma}
+
+\end{itemize}
+
+\end{frame}%yardimci teorem (zamfirescu dönüşümünün genel bir hali), ana teoremde kullanılacak
+
+
 \subsection{Zay\i f Daraltan D\"{o}n\"{u}\c{s}\"{u}m}
 \begin{frame}
   \begin{definition}[\cite{Rhoades2001}]
@@ -176,39 +197,17 @@ oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahipt
 
 
 
-\subsection{Yard\i mc\i\ Bir Teorem}
-\begin{frame}
-\begin{itemize}[<+-| alert@+>]  
-
- \item[] \c{S}imdi Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}nden daha genel olan a\c{s}a\u{g}\i daki lemmay\i\ verelim:
-
- \item[] \begin{lemma}
-  $(X,d)$ tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m,
-  $\alpha \in [0,1)$ olmak \"uzere
-  \begin{equation*}
-    d(f(x), f(y))\leq \alpha\max\bigg\{ d(x,y), \frac{1}{2}[d(x,f(x))+d(y,f(y))], \frac{1}{2}[d(y,f(x))+d(y,f(x))] \bigg\} 
-  \end{equation*}
-  \c{s}art\i n\i\ sa\u{g}l\i yorsa bu d\"{o}n\"{u}\c{s}\"{u}m bir tek sabit noktas\i\ vard\i r.\qed
-\end{lemma}
-
-  \item[] \begin{proof}Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n tan\i m\i n\i n direk sonucudur. Yukar\i daki e\c{s}itsizli\u{g}in sa\u{g} taraf\i ,tan\i mdaki 3 \c{s}arttan herhangi biri i\c{c}in daha b\"uy\"ukt\"ur. 
- \end{proof}
-\end{itemize}
-
-\end{frame}%yardimci teorem (zamfirescu dönüşümünün genel bir hali), ana teoremde kullanılacak
-
-
 \section{Ana Sonu\c{c}lar}
 \subsection{($\psi,\phi$)-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}}
 \begin{frame}
   \begin{definition}[$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}]
     $(X,d)$  bir metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve
     \begin{align}
-M(x,y):=\bigg\{ d(x,y), \frac{d(x,f(x))+d(y,f(y))}{2}, \frac{d(x,f(y))+d(y,f(x))}{2} \bigg\}
+M(x,y):=\bigg\{ d(x,y), \frac{d(x,fx)+d(y,fy)}{2}, \frac{d(x,fy)+d(y,fx)}{2} \bigg\}
     \end{align}
 olmak \"{u}zere her $x,y \in X$ i\c{c}in
 \begin{align}
-\psi\big(d(f(x),f(y)\big)\leq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)
+\psi\big(d(fx,fy\big)\leq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)
 \end{align}
 e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une\texttt{ $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}} denir.\qed 
   \end{definition}
@@ -227,8 +226,8 @@ e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une\texttt{ $(\p
     \begin{proof}
       \begin{align*}
           M(x_n,x_{n+1})&=\max\bigg\{
-          d(x_n,x_{n+1}),\frac{d(x_n,f(x_n))+d(x_{n+1},f(x_{n+1}))}{2},\\
-          &\hspace{80pt} \frac{d(x_n,f(x_{n+1}))+d(x_{n+1},f(x_{n}))}{2} \bigg\}\\
+          d(x_n,x_{n+1}),\frac{d(x_n,fx_n)+d(x_{n+1},fx_{n+1})}{2},\\
+          &\hspace{80pt} \frac{d(x_n,fx_{n+1})+d(x_{n+1},fx_{n})}{2} \bigg\}\\
           &=\max\bigg\{
           d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2},\\
           &\hspace{80pt} \frac{d(x_n,x_{n+2})+d(x_{n+1},x_{n+1})}{2} \bigg\}\\
@@ -245,7 +244,7 @@ e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une\texttt{ $(\p
 \begin{frame}
   \begin{block}{Durum 1. $M(x_n,x_{n+1})=d(x_n,x_{n+1})$ olmas\i\ halinde :}
       \begin{align*}
-          \psi\big(d(x_{n+1},x_{n+2})\big)&=\psi \big(d(f(x_{n}),f(x_{n+1}))\big)\\
+          \psi\big(d(x_{n+1},x_{n+2})\big)&=\psi \big(d(fx_{n},fx_{n+1})\big)\\
           &\leq \psi\big(d(x_{n},x_{n+1})\big)- \phi\big(d(x_{n},x_{n+1})\big)\\
           &\leq \psi\big(d(x_{n},x_{n+1})\big)
       \end{align*}
@@ -264,7 +263,7 @@ O halde
       \end{align}
 olur. Ayr\i ca 
       \begin{align}
-          \psi\big(d(x_{n+1},x_{n+2})\big) &=\psi \big(d(f(x_{n}),f(x_{n+1}))\big) \\
+          \psi\big(d(x_{n+1},x_{n+2})\big) &=\psi \big(d(fx_{n},fx_{n+1})\big) \\
           &\leq \psi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
           & \hspace{10pt}- \phi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
           &\leq \psi\big(d(x_{n},x_{n+1})\big)
@@ -421,11 +420,9 @@ olup $\phi(d(x',x^*))\leq 0$ elde edilir ki $d(x',x^*)=0$ olmas\i n\i\ gerektiri
 \end{frame} %ana teoremin ispatini bitiriyoruuuum
 
 \section{Kaynak\c{c}a}
-\textbf{KAYNAK\c{C}A}
-\bibliographystyle{acm}
-\bibliography{seminer2}
-\nocite{*}
-
+  \textbf{KAYNAK\c{C}A}
+  \vspace{10pt}  \bibliographystyle{acm}
+  \bibliography{seminer2} \nocite{*}
 
 
 
