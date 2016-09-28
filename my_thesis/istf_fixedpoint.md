@@ -73,3 +73,23 @@ J to
 Iff is continuous in a suitable neighborhood of ( to, p), then (30) and (31) are
 equivalent to each other. For (31) follows from (30) by integration, and (30)
 from (31) by differentiation.{Zeidler - Nonlinear Functional Analysis - page 27}
+
+**********************
+Continuous functions preserve compactness,
+Uniformly continuous functions preserve total boundedness,
+Lipschitz continuous functions preserve boundedness.
+
+A set K is compact <=>  K is complete and totally bounded.
+
+A uniformly continuous function maps totally bounded sets to totally bounded sets.A totally bounded set is geometrically ‘finite’, so an infinite sequence of points in a totally bounded set is caged in, so to speak, with nowhere to escape to:
+A set $B$ is totally bounded $\iff$ Every sequence in $B$ has a Cauchy subsequence.
+In the presence of completeness, continuous functions preserve totally bounded sets.
+Alternatively, we can strengthen the definition of boundedness even further to a
+property that is preserved by continuous functions; such a property is compactness,
+
+Any finite set, including ∅, is compact.
+2. The subset [0, 1[∈ R is totally bounded but not compact. For example, the cover
+using balls B 1−1/n (0) for n = 2, . . . has no finite subcover. On the other hand,
+we will soon see that the closed intervals [a, b] are compact.
+3.  Compact metric spaces are totally bounded, and so bounded and separable
+(consider the cover by all ∂-balls). Thus, R and N are not compact.  {Muscat - Functional Analysis - page }
