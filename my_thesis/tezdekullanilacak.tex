@@ -1,32 +1,35 @@
-\documentclass[10pt]{amsart}
+\documentclass[10pt]{article}
 \usepackage[margin=0.5in]{geometry}
-\usepackage[turkish]{babel} %Türkçe bölüm isimleri
+%\usepackage[turkish]{babel} %Türkçe bölüm isimleri
 \usepackage[utf8]{inputenc} %Türkçe karakterler
-\usepackage[T1]{fontenc} %Türkçe heceleme
-\usepackage{amsmath, enumerate, eulervm}
+%\usepackage[T1]{fontenc} %Türkçe heceleme
+\usepackage{amsmath, amsthm, amsfonts, enumerate}
 
-\renewcommand{\abstractname}{\"OZET}
+\renewcommand{\abstractname}{ÖZET}
 \theoremstyle{plain}
 \newtheorem{theorem}{Teorem}
-\newtheorem{proposition}{\"O nerme}
-\newtheorem{example}{\"Ornek}
-\newtheorem*{kanit}{\emph{Kan\i t}}
-
+\newtheorem{proposition}{Önerme}
+\newtheorem{example}{Örnek}
 \theoremstyle{definition}
-\newtheorem{definition}{Tan\i m}
+\newtheorem{definition}{Tanım}
 
 
 \author{Hakan ERGÜL}
 \title{Tez Malzemeleri}
+\date{\today}
 
 \begin{document}
 \maketitle
-
 \section{TANIMLAR}
+Kullanabileceğim tanımlar:
 
-\definition [sabit nokta]{$f:X\to X$ bir fonksiyon olmak üzere $f(x)=x$ şeklindeki $x\in X$ noktasına $f$ fonksiyonunun sabit noktası denir.} 
+\definition [sabit nokta]{$(X,d)$ bir metrik uzay ve $f:X\to X$ bir fonksiyon olmak üzere $f(x)=x$ şeklindeki $x\in X$ noktasına $f$ fonksiyonunun sabit noktası denir.} 
 
-\definition [periyodik nokta] {$f:X\to X$ bir fonksiyon ve $N>1$ bir doğal sayi olmak üzere $f^1(x)=f(x)$ ve $f^{N+1}(x)=f(f^{N}(x))$ şeklinde tanimlansin. $f^N(x)=x$ şeklindeki $x\in X$ noktasına $f$ fonksiyonunun periyodik noktası denir. $N=1$ için bu $x$ noktası sabit noktadır. Ayrica $f^N$ nin sabit noktaları, $f$ nin periyodik noktalarıdır.}
+\definition [periyodik nokta] {$(X,d)$ bir metrik uzay ve $f:X\to X$ bir fonksiyon ve $N>1$ bir doğal sayi olmak üzere $f^1(x)=f(x)$ ve $f^{N+1}(x)=f(f^{N}(x))$ şeklinde tanimlansin. $f^N(x)=x$ şeklindeki $x\in X$ noktasına $f$ fonksiyonunun periyodik noktası denir. $N=1$ için bu $x$ noktası sabit noktadır. Ayrica $f^N$ nin sabit noktaları, $f$ nin periyodik noktalarıdır.}
+
+\definition [yaklaşık(approximate) sabit noktası- $\varepsilon$-sabit nokta] {$(X,d)$ bir metrik uzay ve $f:X\to X$ bir dönüşüm olsun. Eğer bir $\varepsilon>0$ için $d(f(x_0),x_0)<\varepsilon$ olacak şekildeki $x_0\in X$ noktasına $\varepsilon$-sabit nokta denir.}
+
+\definition [coincidence point-çakışık nokta] {$(X,d)$ bir metrik uzay ve $f,g:X\to X$ birer dönüşüm olsun. Eğer $x\in X$ için $f(x)=g(x)$ ise $x$ noktası $f$ ve $g$ fonksiyonlarının çakışma noktasıdır denir. Eğer $f(x)=g(x)=x$ ise bu tür noktalara da $f$ ve $g$ ’nin ortak sabit noktaları denir.}
 
 \definition [lipschitz fonksiyon] {$(X,d)$ bir metrik uzay ve $f:X\to X$ bir fonksiyon olsun. Bir $\alpha >0$ reel sayısı için $f$ fonksiyonu
  $$ d(f(x),f(y))\leq \alpha d(x,y) $$
@@ -50,22 +53,27 @@ $$d(f(x),f(y))< d(x,y) $$
   \end{itemize}
 şartlarıni sağlıyorsa bu fonksiyona mesafe değiştiren fonksiyon denir. Her mesafe değiştiren fonksiyon bir metriktir. Fakat tersi her zaman doğru değildir. Ters örnek: $\psi(t)=t^2$.}
 
+\definition [Picard iterasyonu] {$(X,d)$ bir metik uzay ve $f : X\to X$ bir dönüşüm olsun. $x_0\in X$ ve $x_1=f(x_0)$, $x_2=f(x_1),\cdots$ olmak üzere 
+$$x_{n+1}=f(x_n), \quad n=0,1,2,\cdots$$
+şeklindeki ifadede $x_n$ 'e $x_0$ noktasının $f$ altındaki $n$. Picard iterasyonu olarak adlandırılır.}
+
 \definition [asimptotik regulerlik] {$(X,d)$ bir metrik uzay ve $f:X\to X$ bir dönüşüm olmak üzere bir $x_0\in X$ noktası için 
 $$\lim_{n\to \infty}d(f^n(x_0),f^{n+1}(x_0))=0 $$
 oluyorsa $f$ dönüşümü $x_0$ noktasında asimptotik regulerdir denir.}
 
-\definition [alt yarısürekli] {$(X,d)$ bir metrik uzay ve $f:X\to \mathbb{R}$ bir dönüşüm olsun. $x_0\in X$ olmak üzere her $x\in X$ için 
+\definition [süreklilik] {$(X,d$ ve $(Y,\rho )$ iki metrik uzay, $f:X\to Y$ bir dönüşüm ve $x_ 0\in X$ olsun. Her $\varepsilon>0$ için $d(x,y)<\delta$ olduğunda $\rho (f(x),f(x_0))<\varepsilon$ veya buna denk ifadeyle $f(B(x_0 ;\delta ))\subseteq B(f(x_0);\varepsilon)$ olacak şekilde bir $\delta>0$ varsa, $f$ ye $x_0$ noktasında süreklidir denir. Eğer $f$ , $X$ in her noktasında sürekli ise, $f$ ye $X$ de süreklidir denir.}
+
+\definition [alttan yarısürekli] {$(X,d)$ bir metrik uzay ve $f:X\to \mathbb{R}$ bir dönüşüm olsun. $x_0\in X$ olmak üzere her $x\in X$ için 
 $$\liminf_{x\to x_0}f(x)\geq f(x_0)$$
-oluyorsa $f$ dönüşümü $x_0$ noktasında alt yarısüreklidir denir. Veya $X$'teki $x_0$'a yakınsayan  her $(x_n)$ dizisi için 
+oluyorsa $f$ dönüşümü $x_0$ noktasında alttan yarısüreklidir denir. Veya $X$'teki $x_0$'a yakınsayan  her $(x_n)$ dizisi için 
 $$\lim_{n\to \infty}x_n=x_0\Rightarrow \liminf_{n\to \infty}f(x_n)\geq f(x_0)$$
-oluyorsa $f$ dönüşümü $x_0$ noktasında alt yarısüreklidir denir.}
+oluyorsa $f$ dönüşümü $x_0$ noktasında alttan yarısüreklidir denir.}
 
-
-\definition [üst yarısürekli] {$(X,d)$ bir metrik uzay ve $f:X\to \mathbb{R}$ bir dönüşüm olsun. $x_0\in X$ olmak üzere her $x\in X$ için 
+\definition [üstten yarısürekli] {$(X,d)$ bir metrik uzay ve $f:X\to \mathbb{R}$ bir dönüşüm olsun. $x_0\in X$ olmak üzere her $x\in X$ için 
 $$\limsup_{x\to x_0}f(x)\leq f(x_0)$$
-oluyorsa $f$ dönüşümü $x_0$ noktasında ust yarısüreklidir denir.Veya $X$'teki $x_0$'a yakınsayan her $(x_n)$ dizisi için 
+oluyorsa $f$ dönüşümü $x_0$ noktasında üstten yarısüreklidir denir.Veya $X$'teki $x_0$'a yakınsayan her $(x_n)$ dizisi için 
 $$\lim_{n\to \infty}x_n=x_0\Rightarrow \limsup_{n\to \infty}f(x_n)\leq f(x_0)$$
-oluyorsa $f$ dönüşümü $x_0$ noktasında üst yarısüreklidir denir.}
+oluyorsa $f$ dönüşümü $x_0$ noktasında üstten yarısüreklidir denir.}
 
 \definition [metrik uzay] {$X$ boş olmayan bir küme ve $d:X\times X \to \mathbb{R}$ bir fonksiyon olsun. Her $x,y,z\in X$ için
 
@@ -76,6 +84,25 @@ oluyorsa $f$ dönüşümü $x_0$ noktasında üst yarısüreklidir denir.}
 \end{itemize}
 
 şartları sağlanıyorsa $d$ fonksiyonuna $X$ üzerinde bir metrik ve $d$ ile birlikte $X$'e metrik uzay denir ve bu metrik uzay $(X,d)$ ile gosterilir.}
+
+\definition [yarımetrik uzay] {$X$ boş olmayan bir küme ve $d:X\times X \to \mathbb{R}$ bir fonksiyon olsun. Her $x,y,z\in X$ için
+
+\begin{itemize}
+\item $d(x,y)=0\iff x=y$
+\item $d(x,y)=d(y,x)$
+\item $d(x,y)\leq d(x,z)+d(z,y)$
+\end{itemize}
+
+şartları sağlanıyorsa $d$ fonksiyonuna $X$ üzerinde bir yarımetrik ve $d$ ile birlikte $X$'e yarımetrik uzay denir ve bu metrik uzay $(X,d)$ ile gosterilir.}
+
+\definition [quasi-metrik uzay] {$X$ boş olmayan bir küme ve $d:X\times X \to \mathbb{R}$ bir fonksiyon olsun. Her $x,y,z\in X$ için
+
+\begin{itemize}
+\item $d(x,y)=0\iff x=y$
+\item $d(x,y)\leq d(x,z)+d(z,y)$
+\end{itemize}
+
+şartları sağlanıyorsa $d$ fonksiyonuna $X$ üzerinde bir quasi-metrik ve $d$ ile birlikte $X$'e quasi-metrik uzay denir ve bu metrik uzay $(X,d)$ ile gosterilir.}
 
 \definition [cauchy dizisi] {$(X,d)$ bir metrik uzay ve $\{x_n\}$ de bu uzayda bir dizi olsun. Her $\varepsilon>0$ için $m,n>N$ olduğunda $d(x_n,x_m)<\varepsilon$ olacak bicimde $N(\varepsilon)\in \mathbb{N}$ sayısı varsa $\{x_n\}$ dizisine Cauchy dizisi denir.}
 
@@ -119,7 +146,7 @@ Bu şartları sağlaniyorsa $V$'ye $F$ cismi üzerinde vektor uzayı denir. Ozel
 
 \definition [sınırlı küme] {$(X,d)$ bir metrik uzay ve $B \subset X$ olmak üzere her $x,y\in B$ için $d(x,y)\leq r$ olacak şekilde bir $r>0$ sayısı varsa $B$ kümesine sınırlı küme denir.}
 
-\definition [diameter-çap] {$(X,d)$ bir metrik uzay ve $B \subset X$ olmak üzere her $x,y\in B$ için $\sup_{x,y\in B} d(x,y)$ sayısına $B$ kümesinin çapı denir.}
+\definition [diameter-çap] {$(X,d)$ bir metrik uzay ve $B \subset X$ olmak üzere her $x,y\in B$ için $\delta(B)=\sup_{x,y\in B} d(x,y)$ sayısına $B$ kümesinin çapı denir.}
 
 \definition [totally bounded-tamamen sınırlı(precompact-önkompakt)] {$(X,d)$ bir metrik uzay ve $B \subset X$ olmak üzere her $\varepsilon >0$ için 
 $$B\subseteq \bigcup_{n=1}^{N}B_\varepsilon(a_n),\quad \big(B_\varepsilon(a_n)=\{x: d(x,a_n)<\varepsilon \}\big)$$
@@ -134,6 +161,15 @@ oluyorsa $A$ kümesine konveks küme denir.}
 
 \definition [convex hull] {$V$ bir vektör uzay ve $A\subseteq V$ olmak üzere $A$ kümesini içeren tüm konveks kümelerin kesişimine (yani en küçük konveks kümeye) convex hull denir.}
 
+\definition [b-Metrik Uzayı] {$X$ boş olmayan bir küme ve $b\geq 1$ bir reel sayı olsun. $d:X\times X\to \mathbb{R}^+$ fonksiyonu her $x,y,z\in X$ için aşağıdaki şartları sağlasın:
+  \begin{itemize}
+  \item $d(x,y)=0\iff x=y$
+  \item $d(x,y)=d(y,x)$
+  \item $d(x,z)\leq b[d(x,y)+d(y,z)]$
+  \end{itemize}
+Bu şekildeki $(X,d)$ metrik uzayıda b-metrik uzayı denir. $b=1$ için metrik uzay elde ederiz. $b$-metrik uzay, metrik uzayların bir genelleştirmesidir. Yakınsaklık, cauchy dizisi ve tamlık özellikleri metrik uzaylardaki şekliyle aynı şekilde tanımlanır. In a b-metric space (i) a convergent sequence has a unique limit, (ii) each convergent sequence is Cauchy, (iii) in general, a b-metric is not continuous.}
+
+
 
 
 \section{TEOREMLER}
@@ -143,11 +179,35 @@ oluyorsa $A$ kümesine konveks küme denir.}
 \theorem []
 
 \section{\"ORNEKLER}
-\example [sabit nokta] {$f:[0,1]\to [0,1]$, $f(x)=x^2$ fonksiyonu için $x=0$ ve $x=1$ noktaları sabit noktalardır. Gerçekten $f(0)=0$ ve $f(1)=1$ dir. }
+\example [sabit nokta] {$f,g:[0,1]\to [0,1]$, $f(x)=x^2$ fonksiyonu için $x=0$ ve $x=1$ noktaları sabit noktalardır. Gerçekten $f(0)=0$ ve $f(1)=1$ dir. Fakat $g(x)=x-1$ fonksiyonun hiçbir sabit noktası yoktur.}
 
-\example [sabit nokta] {aaaaa}
+\example [periyodik-sabit nokta] {$f:(0,1)\to ()0,1$, $f(x)=\frac{1}{x}$ fonksiyonunun sabit noktası yoktur. Fakat $f^2(x)=x$ olduğundan her $x\in (0,1)$ noktası $f$ nin periyodik noktasıdır. }
+
+\example [daraltan dönüşüm] {$f:(0,1]\to (0,1]$, $f(x)=\frac{x}{3}$ fonksiyonu $$|f(x)-f(y)|=\frac{1}{3}|x-y|\leq\frac{1}{3}|x-y|$$ olup daraltan bir dönüşümdür. Fakat sabit noktası yoktur, bu $(0,1]$'in tam olmamasından kaynaklanır.}
+
+\example [tamlık-kompaktlık] {$\mathbb{R}$ alışılmış metrikle tamdır fakat kompakt değildir.}
+
+\example [sabit nokta-kesin daraltan] {$f:[1,+\infty)\to [1,+\infty)$ olmak üzere $f(x)=x+\frac{1}{x}$ şeklinde tanımlanan fonksiyon kesin daraltandır. O halde
+      \begin{align*}
+    |f(x)-f(y)|&=\big|x+\frac{1}{x}-y-\frac{1}{y}\big|\\
+&=\big|x-y+\frac{1}{x}-\frac{1}{y}\big|\\
+&=|x-y|\big|1-\frac{1}{xy}\big|\\
+&<|x-y|
+      \end{align*}
+ elde edilir. Çünkü birbirinden farklı her $x,y\in [1,+\infty)$ için $0<1-\frac{1}{xy}<1$ dır.}
+
+\example [sabit nokt-kesin daraltan] {$f:[0,1]\to [0,1]$, $f(x)=\frac{1}{2}x+\frac{1}{4}x^2$ fonksiyonu kesin daraltandır. Gerçekten
+  \begin{align*}
+    \big|\frac{1}{2}x+\frac{1}{4}x^2-\frac{1}{2}y-\frac{1}{4}y^2\big|&\leq \frac{1}{2}|x-y|+\frac{1}{4}|x+y||x-y|\\
+&< \frac{1}{2}|x-y|+\frac{1}{2}|x-y|\\
+&=|x-y|
+  \end{align*}
+olup daraltan olduğu görülebilir.
+
+\example [daraltan dönüşüm] {$\mathbb{R}$ üzerinde tanımlı $f(x)=\cos x $ fonksiyonu açıkça görüleceği üzere daraltan dönüşüm değildir. Kabul edelim ki bir $h\in (0,1)$ olsun öyle ki her $x\neq y$ için
+$$\big|\frac{\cos x-\cos y}{x-y}\big| \leq h$$
+sağlansın. $y\to x$ iken her iki tarafın türevini alırsak $|sin x|\leq h$ olur her $x$ için. Fakat bu bir çelişkidir, çünkü $x=\frac{\pi}{2}$ için hiçbir $h\in (0,1)$ bulunamaz. 
+Diğer yandan 2 
+}
+
 \end{document}
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
