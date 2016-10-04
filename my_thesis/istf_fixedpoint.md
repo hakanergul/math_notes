@@ -93,3 +93,10 @@ using balls B 1−1/n (0) for n = 2, . . . has no finite subcover. On the other 
 we will soon see that the closed intervals [a, b] are compact.
 3.  Compact metric spaces are totally bounded, and so bounded and separable
 (consider the cover by all ∂-balls). Thus, R and N are not compact.  {Muscat - Functional Analysis - page }
+
+**********************
+In particular, (ii) is satisfied whenever T is continuous on [a, b] and differentiable on (a, b) with |T'(x)| < k < 1 for all x\in (a, b). For in that case, the Mean Value Theorem implies that
+|T(x) - T(y) | = |T'(z)(x - y)| < k|x - y|,
+for all x, y \in [a, b]. 
+
+**********************
