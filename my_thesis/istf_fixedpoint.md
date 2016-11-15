@@ -100,3 +100,17 @@ In particular, (ii) is satisfied whenever T is continuous on [a, b] and differen
 for all x, y \in [a, b]. 
 
 **********************
+Every contraction map is a continuous map, but a continuous map need not be a
+contraction map. For example, fx= x^2, x ∈[0, 1] is not a contraction map. 
+A contractive map need not have a ﬁxed point in a complete metric space. For
+example, if we take f : R → R deﬁned by fx = x + π/2 − arctan x, then f is a
+contractive map but does not have a ﬁxed point. Here arctan x <π/2 for all x.In
+case a contractive map f has a ﬁxed point, then it is always unique. For example,
+if x = fx and y = fy, and x \neq y then d(x, y) = d( fx, fy)< d(x, y),a
+contradiction. So, x = y.
+
+If f : R → R given by fx= x + p, a translation map for some p ⇒= 0, then f
+is a nonexpansive map, but f has no ﬁxed point
+
+{Ansari - Nonlinear Analysis page 173-174}
+**********************
