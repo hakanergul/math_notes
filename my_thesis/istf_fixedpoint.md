@@ -121,3 +121,9 @@ metric and the mapping T : X -+ X given by T (x) = 1/(1+x^2) ' Then T is contrac
 not contraction. 
 {Ansari - Metric Spaces - including metric fixed point theory page 122}
 **********************
+The following result is useful to test whether a differentiable function is contraction 
+or not. 
+Theorem 7.4. Let X = [a, b] be a metric space with the usual metric and T : [a, b] -+ 
+[a, b] be a differentiable function. Then T is a contraction mapping on X if and only 
+if there exists a real number a < 1 such that I T' (x) I < a for all x E (a, b). 
+{Ansari - Metric Spaces - including metric fixed point theory page 125}
