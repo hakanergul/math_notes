@@ -114,3 +114,10 @@ is a nonexpansive map, but f has no ﬁxed point
 
 {Ansari - Nonlinear Analysis page 173-174}
 **********************
+It is clear from the definition that every Lipschtiz continuous function 
+is continuous and every contraction mapping is contractive. But converse assertions 
+may not be true. For example, consider the metric space X = [0,00) with the usual 
+metric and the mapping T : X -+ X given by T (x) = 1/(1+x^2) ' Then T is contractive but 
+not contraction. 
+{Ansari - Metric Spaces - including metric fixed point theory page 122}
+**********************
