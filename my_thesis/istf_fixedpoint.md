@@ -100,3 +100,53 @@ In particular, (ii) is satisfied whenever T is continuous on [a, b] and differen
 for all x, y \in [a, b]. 
 
 **********************
+In 1928 K. Menger introduced the following concept of metric
+convexity.
+Definition A metric space (X, ρ) is said to be metrically convex if for any
+two points x, y\in M with x \neq у there exists z\in М, х\neq z \neq у, such that
+p(x,z) + p(z,y) = p(x,y). {Kirk:Goebel - Topics in Metric Fixed Point Theory -p 23}
+**********************
+It is easy to see that the distance function in a b-metric space need not
+be continuous. In fact if {q n } ⊂ X and if lim n→∞ q n = q, then for any p ∈ X
+all that can be said is that
+s −1 d (p, q) ≤ lim inf d (p, q n ) ≤ lim sup d (p, q n ) ≤ sd (p, q) .
+n→∞
+n→∞
+In general lim n→∞ d (p, q n ) = d (p, q) ⇔ s = 1. Indeed, open balls in such
+spaces need not be open sets. This prompts us to suggest a strengthening of
+the notion of b-metric spaces which remedies this defect. {FPT in Dist. Spaces - p 121}
+**********************
+Some families of control functions ... çoook önemli
+{Agarwal;Karapınar - FPT in Metric Type Spaces - p10-11}
+**********************
+Lemma 2.3.4.  
+{age - p14 }
+**********************
+To give an example of a quasimetric that is not a metric, consider any metric
+space (X, d), and define df(x, y) = d(x, y)f. Then, d f is a quasi metric for all
+E > 0, but rarely a metric if E > 1. Note that the identity map from (X, d) to
+(X, d f ) is quasisymmetric. {Heinonen-Lect. on Analysis on Metric Spaces page 110}
+çok güzel 100 sayfadan başlayan bölümquasimetric space(ya da b-metric)
+**********************
+Fixed point theory is mostly concerned with the following basic issues:
+(a) Existence (i.e., is Fix(F) f^ 0 ?).
+(b) Uniqueness (or whether the fixed points are isolated).
+(c) Approximation (i.e., devising algorithms for locating fixed points).
+(d) Properties {e.g., structure, connectedness, etc.) of Fix(F). (Reich - Nonlinear Semigroups, Fixed Points sf 107)
+**********************
+Of course, since the Brouwer theorem is stated in purely topological
+terms, it is actually true for any topological space X homeomorphic to
+B n ; so in particular, for any compact convex set in R n . (As an exercise
+the reader might want to prove this.) Notice that as compared to the
+Picard-Banach theorem, here we have no uniqueness. Also, the space is
+rather specific, for example it is compact (and convex), but the map is
+rather general. In Picard-Banach it is the opposite. The space is merely
+complete, but the map is required to have very strong properties and
+so we get uniqueness. In the Brouwer theorem there is no uniqueness.
+For example the identity map has all of B n as fixed points.(Farmakis -Fixed Point Theorems sf 5)
+**********************
+SNT giriş e tarihi ile ilgli Nonstandart Methods in FPT sf49
+**********************
+For nonexpansive mappings, the sequence of iterates x_n+1 = fx_n , n = 0,1,2, ... need not converge to a fixed point of f. For example, let f : [-1,1] -> [-1,1]
+be given by fx = -x. Then for x_0 \neq 0, x_n+1 = fx_n does not converge to 0= f(0). Singh-Watson- FPT and Best Approximation sf 15
+**********************
