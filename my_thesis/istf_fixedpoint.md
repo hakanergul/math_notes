@@ -150,3 +150,18 @@ SNT giriş e tarihi ile ilgli Nonstandart Methods in FPT sf49
 For nonexpansive mappings, the sequence of iterates x_n+1 = fx_n , n = 0,1,2, ... need not converge to a fixed point of f. For example, let f : [-1,1] -> [-1,1]
 be given by fx = -x. Then for x_0 \neq 0, x_n+1 = fx_n does not converge to 0= f(0). Singh-Watson- FPT and Best Approximation sf 15
 **********************
+Krasnoselskij iteration, in the particular case λ = 1 2, was first introduced
+by Krasnoselskij [Kra55] in 1955, and in the general form by Schaefer [Sch57] in 1957. The original Mann iteration was defined in a matrix formulation by Mann
+[Man53] in 1953. Ishikawa [Ish74] introduced his iteration process in a paper published in
+1974. The Ishikawa iterations with errors were considered very recently by Liu, L.S. [LL95a], [LL95b] in the form (10) and by Xu, Y.G. [XuY98] in the form (11). For more details on Mann and Ishikawa iterations, see the Bibliographical Comments in Chapters 4 and 55
+Berinde - MAlum kitabı sf 28
+**********************
+Krasnoselskij gave no estimation of the rate of convergence of {xn}∞
+n=0 and,
+in fact, it is typical of iteration methods involving nonexpansive mappings that their convergence may be arbitrarily slow. Actually, Oblomskaja [Obl68] gave
+a linear example where convergence is slower that n−α for all α ∈ (0, 1). In this context, we also mention the monograph Patterson [Pat74, Chapter 4] which contains a thorough discussion of successive approximation method for linear operators, and an extensive bibliography. Schaefer [Sch57] extended Krasnoselskij’s result to the case when the con-
+stant 1/2 is replaced by a λ ∈ (0, 1), obtaining in this way the first result for the general Krasnoselskij iteration, defined by (1). Then, Edelstein [Ede66]
+extended the previous result to the case when E is strictly convex.
+Berinde - MAlum kitabı sf 83
+**********************
+

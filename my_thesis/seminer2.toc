@@ -1,0 +1,19 @@
+\beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {1}{Giri\c {s}}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Mesafe De\u {g}i\c {s}tiren Fonksiyon}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Asimptotik Regulerlik}{5}{0}{1}
+\beamer@subsectionintoc {1}{3}{Baz\i \ Bilinen Sabit Nokta Teoremleri}{6}{0}{1}
+\beamer@subsectionintoc {1}{4}{Zamfirescu D\"{o}n\"{u}\c {s}\"{u}m\"{u}}{10}{0}{1}
+\beamer@subsectionintoc {1}{5}{Zamfirescu'ya Denk Bir Teorem}{12}{0}{1}
+\beamer@subsectionintoc {1}{6}{Zay\i f Daraltan D\"{o}n\"{u}\c {s}\"{u}m}{15}{0}{1}
+\beamer@subsectionintoc {1}{7}{($\psi -\phi $)-zay\i f Daraltan D\"{o}n\"{u}\c {s}\"{u}m}{16}{0}{1}
+\beamer@subsectionintoc {1}{8}{($\psi -\phi $)-zay\i f Kannan ve Chatterjea D\"{o}n\"{u}\c {s}\"{u}mleri}{17}{0}{1}
+\beamer@sectionintoc {2}{Ana Sonu\c {c}lar}{18}{0}{2}
+\beamer@subsectionintoc {2}{1}{($\psi ,\phi $)-zay\i f Zamfirescu d\"{o}n\"{u}\c {s}\"{u}m\"{u}}{18}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bir Lemma}{19}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{1}{Durum 1}{24}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{2}{Durum 2}{25}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{3}{ \.{I}spat\i n Sonucu :}{26}{0}{2}
+\beamer@subsectionintoc {2}{3}{Ana Teorem}{27}{0}{2}
+\beamer@subsectionintoc {2}{4}{Ana Teoremin \.{I}spat\i }{28}{0}{2}
+\beamer@sectionintoc {3}{Kaynak\c {c}a}{35}{0}{3}
