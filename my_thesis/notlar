@@ -1,0 +1,33 @@
+
+
+* fixed point theory çalışılacak textbooks:
+** kirk-khamsi - An Introduction to Metric Spaces and Fixed Point Theory
+** sing-srivatsa - Fixed Point Theory and Best Approximation
+** khamsi - ansari - Topics in Fixed Point Theory
+** dugundji - Fixed Point Theory
+** agarwal-oregan - Fixed Point Theory and Applications
+** agarwal-oregan - Fixed Point Theory for Lipschitzian-type Mappings with Applications
+
+**********************
+{weakly contractive kavramı hakkında}
+	-Dugundji ve Granas bu kavramı 1978'de kullanmış. Fakat Alber Et.Al. bu kavramı 1997'de "Principles of weakly contractive maps in Hilbert spaces, new results in operator theory" makalesinde kullanmış. Bu Alber et.al [1997]' deki kullanım yaygınlık kazanıp bilinmiş. Ama isimlendirme Dugundji'ye ait. Şimdilerde okuduğum "A fixed point theorem for weakly Zamfirescu mappings" makalesi de Dugundji'nin kullandığı bağlamı esas alıyor.
+	-partial metric spaces 'de bu mantık kullanılarak weakly contractive ve weakly Kannan donusumleri için ispatlar yapılmış. Biz de diğer b-metric veya partially ordered veya generalized metric uzaylarda gösterebiliriz şayet denenmemişse.
+**********************25 şubat 2016 23:52
+{metric-like, metric-type, b-metric, partial metric}
+
+metric-like: metriğin birinci şartı çift taraflı gerektirme olmuyor, yani d(x,y)=0 => x=y dir. Tersi gecerli olmayabilir metrik uzaylardaki gibi.
+
+metric-type(b-metric): son şart yani üçgen eşitsizliği şöyle oluyor, s>=1 olmak üzere d(x,z)<=s[d(x,y)+d(y,z)]
+
+partial metric: Roughly   speaking,   a   partial metric space is distinguished from a metric space with the fact that the self-distance of a point need not to be zero.
+
+
+**********************16 Mart 2016 16:52
+{tez ve seminer hakkında}
+seminer konusu en geç 10 Nisan'a kadar belirlenecek. Aşağı yukarı bbelirledik giibİ. Zamfirescu Dönüşümü'nün b-metric uzaylara genelleştirilmesini yapacağız ilkin. Ama çok basit olacağı için diğer metric uzaylara dad genelleştirebiliriz.
+
+**********************17 Mart 2016 00:18
+{tez ve seminer konusu}
+seminer konusunu düşündüm de hocayla belirlediğimz konu çok basit olur. O yüzden dugundji ve granas'ın kitabındaki bazı teoremleri genelleştireceğim. Yarın çalışırım .....
+
+**********************23 Eylül 2016 17:56

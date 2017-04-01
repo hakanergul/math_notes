@@ -1,0 +1,428 @@
+\documentclass[8pt]{beamer}
+\usepackage{pxfonts}  
+\usepackage{concmath}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+\usetheme{Antibes}
+\usecolortheme{beaver}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+
+\uselanguage{turkish}
+\languagepath{turkish}
+\deftranslation[to=turkish]{Theorem}{Teorem}
+\deftranslation[to=turkish]{Definition}{Tan\i m}
+
+
+
+\title{($\psi,\phi$)-zay\i f Zamfirescu D\"on\"u\c{s}\"um\"u}
+\author{Hakan ERG\"UL}
+\institute{Atat\"{u}rk \"{U}niversitesi}
+\date{\today}
+
+{\setlength{\abovedisplayskip}{0pt}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+  \frametitle{\.{I}\c{c}indekiler}
+  \tableofcontents
+\end{frame}
+
+
+\section{Giri\c{s}}
+\begin{frame}
+  \frametitle{\"Ozet}
+  \textrm{Dutta ve Choudhury \cite{Dutta2008}, Banach sabit nokta teoreminden daha genel olan sabit nokta teoremini ortaya att\i . K\i r ve K\i z\i ltun\c{c} \cite{Kir2013} ayn\i \ mant\i \u{g}\i \ Kannan\cite{Kannan1969} ve Chatterjea\cite{Chatterjea1972} sabit nokta teoremlerine uygulayarak daha genel bir sonu\c{c} elde etti. Bu \c{c}al\i \c{s}mada ayn\i \ mant\i \u{g}\i \ Zamfirescu\cite{Zamfirescu1972}' den daha genel bir teoreme uygulamaya \c{c}al\i \c{s}t\i k.}
+\end{frame}
+
+
+\subsection{Mesafe De\u{g}i\c{s}tiren Fonksiyon}
+\begin{frame}
+\frametitle{Mesafe De\u{g}i\c{s}tiren Fonksiyon}
+  \begin{definition}[\cite{Khan1984}]
+     A\c{s}a\u{g}\i daki \c{s}artlar\i \ sa\u{g}layan $\psi:[0,\infty)\to[0,\infty)$ fonksiyonuna mesafe de\u{g}i\c{s}tiren fonksiyon denir:
+     \begin{enumerate}
+      \item $\psi$ fonksiyonu s\"urekli ve azalmayan(monoton artan)d\i r.
+      \item $\psi(t)=0\Leftrightarrow t=0$
+     \end{enumerate}
+  \end{definition}
+\end{frame}
+
+\subsection{Asimptotik Regulerlik}
+\begin{frame}
+  \begin{definition}
+     $(X,d)$ metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m olmak \"uzere
+     \begin{equation*}
+       \lim_{n\to \infty}d(f^nx_0,f^{n+1}x_{0})=0 
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} $x_0\in X$ noktas\i nda \texttt{asimptotik reguler}dir denir.
+\cite{Browder1966}
+  \end{definition}
+\end{frame}
+
+
+\subsection{Baz\i \ Bilinen Sabit Nokta Teoremleri}
+\begin{frame}
+\frametitle{Baz\i \ Bilinen Sabit Nokta Teoremleri}
+   $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ olmak \"{u}zere 
+   \begin{itemize}[<+-| alert@+>]
+
+   \item (Banach Daralma \.{I}lkesi\cite{Banach1922})
+     \begin{equation} 
+       d(fx, fy)\leq \alpha d(x,y)
+\tag*{\textsc{(b)}}
+        \end{equation}
+   \item (Kannan D\"{o}n\"{u}\c{s}\"{u}m\"{u}\cite{Kannan1969})
+     \begin{equation} 
+       d(fx, fy)\leq \frac{\alpha}{2}\big\{ d(x,fx)+d(y,fy)\big\}
+\tag*{\textsc{(k)}}
+         \end{equation}
+   \item (Chatterjea D\"{o}n\"{u}\c{s}\"{u}m\"{u}\cite{Chatterjea1972})
+     \begin{equation} 
+       d(fx, fy)\leq \frac{\alpha}{2}\big\{ d(x,fy)+d(y,fx)\big\}
+\tag*{\textsc{(c)}}
+         \end{equation}
+\item[] \c{s}art\i n\i\ sa\u{g}l\i yorsa, $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i\ vard\i r.
+
+   \end{itemize}
+
+    \qed
+\end{frame}%bazi ünlü sabit nokta teoremleri
+
+\subsection{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
+\begin{frame}
+\frametitle{Zamfirescu D\"{o}n\"{u}\c{s}\"{u}m\"{u}}
+ $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\alpha \in [0,1)$ ve $\beta , \gamma \in [0,\frac{1}{2}) $ olmak \"{u}zere her $x,y \in X$ i\c{c}in 
+    \begin{enumerate}
+    \item $\begin{aligned} d(fx, fy)\leq \alpha d(x,y)
+      \end{aligned}$
+    \item
+      $\begin{aligned} d(fx, fy)\leq \beta \big\{
+        d(x,fx)+d(y,fy)\big\}
+      \end{aligned}$
+
+    \item
+      $\begin{aligned} d(fx, fy)\leq \gamma \big\{
+        d(x,fy)+d(y,fx)\big\}
+      \end{aligned}$
+\end{enumerate}
+\c{s}artlar\i ndan en az biri do\u{g}ru ise $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n bu uzayda bir tek sabit noktas\i \ vard\i r.
+\begin{block}{Not}  
+\begin{itemize}[<+-| alert@+>]  
+\item Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} \cite{Zamfirescu1974} tam metrik uzayda bir tek sabit noktaya yak\i nsar.  
+\item Rhoades \cite{Rhoades1977} 'de \emph{Theorem 1}. \emph{(xiv)} ve \emph{(xxv)}' den   Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}n\"{u}n, \textsc{(b)}, \textsc{(k)} ve \textsc{(c)}'den daha genel oldu\u{g}u g\"ostermi\c{s}tir.
+\end{itemize}
+
+\end{block}
+\end{frame}%Zamfirescu dönüşümü ve bir proposition
+
+
+\subsection{Zamfirescu'ya Denk Bir Teorem}
+\begin{frame}
+\begin{itemize}[<+-| alert@+>]  
+
+ \item[] Rhoades\cite{Rhoades1977}'de \textit{sayfa 266}'da Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}ne denk olan a\c{s}a\u{g}\i daki teoremi vermi\c{s}tir:
+
+ \item[] \begin{lemma}
+  $(X,d)$ tam metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m,
+  $\alpha \in [0,1)$ olmak \"uzere
+  \begin{equation*}
+    d(fx, fy)\leq \alpha\max\bigg\{ d(x,y), \frac{1}{2}[d(x,fx)+d(y,fy)], \frac{1}{2}[d(y,fx)+d(y,fx)] \bigg\} 
+  \end{equation*}
+  \c{s}art\i n\i\ sa\u{g}l\i yorsa bu d\"{o}n\"{u}\c{s}\"{u}m bir tek sabit noktas\i\ vard\i r.\qed
+\end{lemma}
+
+\end{itemize}
+
+\end{frame}%yardimci teorem (zamfirescu dönüşümünün genel bir hali), ana teoremde kullanılacak
+
+
+\subsection{Zay\i f Daraltan D\"{o}n\"{u}\c{s}\"{u}m}
+\begin{frame}
+  \begin{definition}[\cite{Rhoades2001}]
+     $(X,d)$ metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyon olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       d(fx,fy)\leq d(x,y)-\phi(d(x,y))
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u}ne zay\i f daraltan d\"{o}n\"{u}\c{s}\"{u}m denir.
+  \end{definition}
+  \begin{block}{Not}
+    Rhoades\cite{Rhoades2001}, tam metrik uzayda zay\i f daraltan
+    d\"{o}n\"{u}\c{s}\"{u}m\"un bir tek sabit noktas\i \ oldu\u{g}unu
+    ve bu d\"{o}n\"{u}\c{s}\"{u}m\"un \textsc{(b)}'den daha genel
+    oldu\u{g}unu g\"ostermi\c{s}tir. Ger\c{c}ekten de $k\in(0,1)$
+    olmak \"uzere $\phi(t)=kt$ al\i nd\i \u{g}\i nda \textsc{[b]} elde
+    edilir.
+  \end{block}
+
+\end{frame}
+
+\subsection{($\psi-\phi$)-zay\i f Daraltan D\"{o}n\"{u}\c{s}\"{u}m}
+\begin{frame}
+Dutta ve Choudhury\cite{Dutta2008}, Rhoades\cite{Rhoades2001}'in vermi\c{s} oldu\u{g}u zay\i f daraltan d\"{o}n\"{u}\c{s}\"{u}mden daha genel olan a\c{s}a\u{g}\i daki teoremi kan\i tlam\i \c{s}t\i r.
+  \begin{theorem}[\cite{Dutta2008}]
+     $(X,d)$ metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       \psi(d(fx,fy))\leq \psi(d(x,y))-\phi(d(x,y))
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
+  \end{theorem}
+\end{frame}
+
+
+\subsection{($\psi-\phi$)-zay\i f Kannan ve Chatterjea D\"{o}n\"{u}\c{s}\"{u}mleri}
+\begin{frame}
+Dutta ve Choudhury\cite{Dutta2008}'nin mant\i \u{g}\i n\i \ kullanarak K\i r ve K\i z\i ltun\c{c}\cite{Kir2013}, s\i ras\i yla Kannan ve Chatterjea sabit nokta teoremlerinden daha genel olan ($\psi-\phi$)-zay\i f Kannan ve ($\psi-\phi$)-zay\i f Chatterjea teoremlerini ortaya atm\i \c{s}t\i r.
+  \begin{theorem}[($\psi-\phi$)-zay\i f Kannan\cite{Kir2013}]
+     $(X,d)$ tam metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       \psi(d(fx,fy))\leq \psi\bigg(\frac{d(x,fx)+d(y,fy)}{2}\bigg)-\phi\bigg(\frac{d(x,fx)+d(y,fy)}{2}\bigg)
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
+  \end{theorem}
+  \begin{theorem}[($\psi-\phi$)-zay\i f Chatterjea\cite{Kir2013}]
+     $(X,d)$ tam metrik uzay, $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m ve $\psi$ ve $\phi$ mesafe de\u{g}i\c{s}tiren fonksiyonlar olmak \"uzere her $x, y\in X$ i\c{c}in
+     \begin{equation*}
+       \psi(d(fx,fy))\leq \psi\bigg(\frac{d(x,fy)+d(y,fx)}{2}\bigg)-\phi\bigg(\frac{d(x,fy)+d(y,fx)}{2}\bigg)
+     \end{equation*}
+oluyorsa $f$ d\"{o}n\"{u}\c{s}\"{u}m\"{u} bu uzayda bir tek sabit noktaya sahiptir.
+  \end{theorem}
+\end{frame}
+
+
+
+\section{Ana Sonu\c{c}lar}
+\subsection{($\psi,\phi$)-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}}
+\begin{frame}
+  \begin{definition}[$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}]
+    $(X,d)$  bir metrik uzay ve $f: X \rightarrow X$ bir d\"{o}n\"{u}\c{s}\"{u}m, $\psi,\phi : [0,\infty)\to [0,\infty)$ s\"urekli fonksiyonlar ayr\i ca $\psi$ azalmayan ve $\phi(x)=0 \iff x=0$ ve
+    \begin{align}
+M(x,y):=\bigg\{ d(x,y), \frac{d(x,fx)+d(y,fy)}{2}, \frac{d(x,fy)+d(y,fx)}{2} \bigg\}
+    \end{align}
+olmak \"{u}zere her $x,y \in X$ i\c{c}in
+\begin{align}
+\psi\big(d(fx,fy\big)\leq \psi\big(M(x,y)\big)-\phi\big(M(x,y)\big)
+\end{align}
+e\c{s}itsizli\u{g}ini sa\u{g}layan $f$ d\"{o}n\"{u}\c{s}\"{u}m\"une\texttt{ $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}} denir.\qed 
+  \end{definition}
+\end{frame}%$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} tanimi
+
+\subsection{Bir Lemma}
+\begin{frame}
+\begin{itemize}[<+-| alert@+>]  
+
+  \item[] 
+  \begin{lemma}[Asimptotik Regulerlik]
+   $f$ bir $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} olmak \"{u}zere $d(x_n,x_{n+1})\rightarrow 0$ d\i r.
+  \end{lemma}
+
+  \item[] 
+    \begin{proof}
+      \begin{align*}
+          M(x_n,x_{n+1})&=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,fx_n)+d(x_{n+1},fx_{n+1})}{2},\\
+          &\hspace{80pt} \frac{d(x_n,fx_{n+1})+d(x_{n+1},fx_{n})}{2} \bigg\}\\
+          &=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2},\\
+          &\hspace{80pt} \frac{d(x_n,x_{n+2})+d(x_{n+1},x_{n+1})}{2} \bigg\}\\
+          &=\max\bigg\{
+          d(x_n,x_{n+1}),\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg\}
+      \end{align*}
+    \end{proof}
+
+  \item[] elde ederiz. Burada iki durum s\"oz konusu olur:
+\end{itemize}
+\end{frame}%bir lemmamiz, asimptotik regulerlik aslinda
+
+\subsubsection{Durum 1}
+\begin{frame}
+  \begin{block}{Durum 1. $M(x_n,x_{n+1})=d(x_n,x_{n+1})$ olmas\i\ halinde :}
+      \begin{align*}
+          \psi\big(d(x_{n+1},x_{n+2})\big)&=\psi \big(d(fx_{n},fx_{n+1})\big)\\
+          &\leq \psi\big(d(x_{n},x_{n+1})\big)- \phi\big(d(x_{n},x_{n+1})\big)\\
+          &\leq \psi\big(d(x_{n},x_{n+1})\big)
+      \end{align*}
+olup $\psi$ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ d\i r. Yani $\{d(x_n,x_{n+1})\}$ dizisi azaland\i r.
+   \end{block}
+\end{frame}%Durum 1'i inceleyelim
+
+
+\subsubsection{Durum 2} 
+\begin{frame} 
+  \begin{block}{Durum 2.  $M(x_n,x_{n+1})=\frac{1}{2}\big(d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})\big)$ olmas\i\ hali :}
+O halde 
+      \begin{align}
+        d(x_n,x_{n+1})&\leq \frac{1}{2}\big(d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})\big)\\
+                    &\leq d(x_{n+1},x_{n+2}) 
+      \end{align}
+olur. Ayr\i ca 
+      \begin{align}
+          \psi\big(d(x_{n+1},x_{n+2})\big) &=\psi \big(d(fx_{n},fx_{n+1})\big) \\
+          &\leq \psi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
+          & \hspace{10pt}- \phi\bigg(\frac{d(x_n,x_{n+1})+d(x_{n+1},x_{n+2})}{2}\bigg) \\
+          &\leq \psi\big(d(x_{n},x_{n+1})\big)
+      \end{align}
+olup $\psi $ azalmayan oldu\u{g}undan $$d(x_{n+1},x_{n+2})\leq d(x_n,x_{n+1})$$ d\i r. Bu ise (4) e\c{s}itsizli\u{g}i ile \c{c}eli\c{s}ir.
+   \end{block}
+\end{frame}%Durum 2'i inceleyelim
+
+
+\subsubsection{ \.{I}spat\i n Sonucu :} 
+\begin{frame} 
+  \begin{block}{Lemman\i n Sonucu:}
+Sonu\c{c} olarak  $M(x_{n},x_{n+1})= d(x_n,x_{n+1})$ d\i r. O halde $\{d(x_n,x_{n+1})\}$ dizisi monoton azalan(artmayan) bir dizidir ve bir $r\geq 0$ say\i s\i na yak\i nsar. Bu bilgiyi kullan\i rsak $$\psi\big(d(x_{n+1},x_{n+2})\big)\leq \psi\big(d(x_{n},x_{n+1})\big)-\phi\big(d(x_{n},x_{n+1})\big)$$ olup $n\to \infty$ iken limitini al\i rsak $$\psi(r)\leq \psi(r)-\phi(r)$$ elde ederiz ki bu $r=0$ olmas\i n\i\ gerektirir. Sonu\c{c} olarak $\{d(x_n,x_{n+1})\}\to 0$. \qed
+   \end{block}
+\end{frame}%lemmanın sonucu
+
+
+
+\subsection{Ana Teorem}
+\begin{frame}
+  \begin{theorem}[$(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u}]
+    $(X,d)$  tam metrik uzay ve $f: X \rightarrow X$ bir $(\psi,\phi)$-zay\i f Zamfirescu d\"{o}n\"{u}\c{s}\"{u}m\"{u} ise bu uzayda bir tek sabit noktas\i \ vard\i r.
+  \end{theorem}
+\end{frame}%ispatlanacak olan teoremimiz
+
+
+
+
+\subsection{Ana Teoremin \.{I}spat\i }
+\begin{frame}
+  \begin{block}{Ana Teoremin \.{I}spat\i }
+    \"{O}ncelikle $\{x_n\}$ dizisinin Cauchy dizisi oldu\u{g}unu g\"osterelim. Varsayal\i m ki $\{x_n\}$ bir Cauchy dizisi olmas\i n. O halde $\{x_n\}$ dizisinin \"oyle iki $\{x_{n(k)}\}$ ve $\{x_{m(k)}\}$ altdizisi vard\i r ki $\varepsilon_0 > 0$ olmak \"uzere $m(k)>n(k)\geq k$ olacak \c{s}ekildeki her $k\in \mathbb{N}$ i\c{c}in $$d(x_{m(k)},x_{n(k)})\geq \varepsilon_0$$ d\i r. Dahas\i\ yukar\i daki \c{s}artlar\i\ sa\u{g}layan $m(k)$ say\i s\i n\i\ $n(k)$ dan b\"uy\"uk en k\"u\c{c}\"uk say\i\ olarak se\c{c}ersek $$d(x_{m(k)-1},x_{n(k)})<\varepsilon_0$$ elde ederiz. Buradan
+    \begin{align}
+      \varepsilon_0 &\leq d(x_{m(k)},x_{n(k)})\\
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)})\\
+      & <d(x_{m(k)},x_{m(k)-1})+\varepsilon_0
+    \end{align}
+olup $k\to \infty$ iken
+    \begin{equation}
+      d(x_{m(k)},x_{n(k)})\to \varepsilon_0
+    \end{equation}
+olur.
+\end{block}
+\end{frame}
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Yine
+    \begin{align}
+      d(x_{m(k)},x_{n(k)})&\leq  d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})\\ 
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)})+d(x_{n(k)},x_{n(k)-1})\\
+      &\hspace{100pt} +d(x_{n(k)-1},x_{n(k)})
+    \end{align}
+e\c{s}itsizli\u{g}inde $k\to \infty$ iken limit al\i rsak 
+     \begin{equation}
+        d(x_{m(k)-1},x_{n(k)-1})\to \varepsilon_0
+     \end{equation}
+elde ederiz.
+
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Benzer olarak
+    \begin{align}
+      d(x_{m(k)},x_{n(k)})&\leq  d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)})\\ 
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})
+    \end{align}
+e\c{s}itsizli\u{g}inde $k\to \infty$ iken limit al\i rsak 
+     \begin{equation}
+        d(x_{m(k)-1},x_{n(k)})\to \varepsilon_0
+     \end{equation}
+buluruz.
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Ayr\i ca
+    \begin{align}
+      d(x_{m(k)},x_{n(k)})&\leq  d(x_{m(k)},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})\\ 
+      &\leq d(x_{m(k)},x_{m(k)-1})+d(x_{m(k)-1},x_{n(k)-1})+d(x_{n(k)-1},x_{n(k)})
+    \end{align}
+e\c{s}itsizli\u{g}inde $k\to \infty$ iken limit al\i rsak 
+     \begin{equation}
+        d(x_{m(k)},x_{n(k)-1})\to \varepsilon_0
+     \end{equation}
+elde ederiz.
+
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Sonu\c{c} olarak 
+Di\u{g}er yandan
+    \begin{align}
+      \psi(\varepsilon_0)&\leq \psi\big(d(x_{m(k)},x_{n(k)})\big)\\ 
+      &= \psi\big(d(fx_{m(k)-1},fx_{n(k)-1})\big)\\
+      &\leq \psi\big(M(x_{m(k)-1},x_{n(k)-1})\big)-\phi\big(M(x_{m(k)-1},x_{n(k)-1})\big)    \end{align}
+d\i r. Burada (12), (16), (19) ve (22) deki bilgileri kullan\i rsak
+     \begin{align}
+        \lim_{k\to \infty}M(x_{m(k)-1},x_{n(k)-1})&=\lim_{k\to \infty}\max\bigg\{ d(x_{m(k)-1},x_{n(k)-1}),\\
+       &\hspace{10pt}\frac{1}{2}[d(x_{m(k)-1},x_{m(k)})+d(x_{n(k)-1},x_{n(k)})],\\
+       &\hspace{10pt}\frac{1}{2}[d(x_{m(k)-1},x_{n(k)})+d(x_{m(k)},x_{n(k)-1})] \bigg\}\\
+       &=\max\{\varepsilon_0, 0, \varepsilon_0\}\\
+       &=\varepsilon_0
+     \end{align}
+elde ederiz. 
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+
+\begin{frame}
+ \begin{block}{Ana Teoremin \.{I}spat\i }
+Bunu (25)'te yerine yazarsak
+    \begin{align}
+      \psi(\varepsilon_0)\leq\psi(\varepsilon_0)-\phi(\varepsilon_0)
+    \end{align}
+olup  $\phi(\varepsilon_0)\leq 0$ olur ki bu da $\varepsilon_0=0$ olmas\i n\i\ gerektirir. Bu ise ba\c{s}taki kabul\"um\"uzle \c{c}eli\c{s}ir. Demekki kabul\"um\"uz yanl\i \c{s}t\i r. Yani $\{x_n\}$ bir Cauchy dizisidir. $(X,d)$ tam metrik uzay oldu\u{g}u i\c{c}in $\{x_n\}$ bu uzayda bir $x^*$ noktas\i na yak\i nsar. 
+Buradan hareketle
+    \begin{align}
+      \lim_{n\to \infty}M(x_n, x^*)&=\lim_{n\to \infty}\max\bigg\{ d(x_n,x^*),\frac{1}{2}[ d(x_n,x_{n+1})+ d(x^*,fx^*)],\\
+      &\hspace{90pt}\frac{1}{2}[ d(x_n,fx^*)+ d(x^*,x_{n+1})]\bigg\}\\
+      & =\frac{d(x^*,fx^*)}{2}
+    \end{align}
+elde ederiz. Bu bilgiyi (2) de yerine yazarsak $n\to \infty$
+\begin{align}
+  \psi(d(x^*,fx^*))\leq \psi\bigg(\frac{d(x^*,fx^*)}{2}\bigg)-\phi\bigg(\frac{d(x^*,fx^*)}{2}\bigg) 
+\end{align}
+\end{block}
+\end{frame}%ana teoremin ispatı
+
+\begin{frame}
+  \begin{block}{Ana Teoremin \.{I}spat\i }
+    yani bu da
+    \begin{align}
+      \phi\bigg(\frac{d(x^*,fx^*)}{2}\bigg)  \leq \psi\bigg(\frac{d(x^*,fx^*)}{2}\bigg)-\psi(d(x^*,fx^*))
+    \end{align}
+e\c{s}ittir. Bu e\c{s}itsizli\u{g}in sa\u{g} taraf\i\ $\psi$ azalmayan oldu\u{g}u i\c{c}in $d(x^*,fx^*)\neq 0$ oldu\u{g}u s\"urece  negatif  olup $\phi$ 'nin negatif olmamas\i\ ile \c{c}eli\c{s}ir. B\"oylece $d(x^*,fx^*)=0$ olup $x^*$ noktas\i\ $f$ nin bir sabit noktas\i d\i r.\\
+\vspace{10pt}
+\hspace{5pt} \c{S}imdi sabit noktan\i n tek oldu\u{g}unu g\"osterelim. Kabul edelim ki $x'\neq x^*$, $f$ nin iki sabit noktas\i\ olsun. O halde 
+   \begin{align}
+     \psi(d(x',x^*))&=\psi(d(fx',fx^*))\\
+      &\leq \psi(M(x',x^*))-\phi(M(x',x^*))\\
+      & \leq \psi(d(x',x^*))-\phi(d(x',x^*))
+   \end{align}
+olup $\phi(d(x',x^*))\leq 0$ elde edilir ki $d(x',x^*)=0$ olmas\i n\i\ gerektirir. Bu sabit noktan\i n tek oldu\u{g}unu kan\i tlar. \qed
+  \end{block}
+\end{frame} %ana teoremin ispatini bitiriyoruuuum
+
+\section{Kaynak\c{c}a}
+  \textbf{KAYNAK\c{C}A}
+  \vspace{10pt}  \bibliographystyle{acm}
+  \bibliography{seminer2} \nocite{*}
+
+
+
+\end{document}
